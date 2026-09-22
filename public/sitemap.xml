@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>//localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</loc>
+    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/first-article/</loc>
+  </url><url>
+    <loc>//localhost:1313/posts/test/</loc>
+  </url><url>
+    <loc>//localhost:1313/posts/%E7%BA%AA%E5%BF%B5%E7%A2%91%E8%B0%B7%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B8%B8%E6%88%8F%E7%9F%A5%E8%AF%86/</loc>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,24 @@
+baseURL = "/"
+languageCode = "zh-cn"
+title = "Redou的博客"
+theme = "PaperMod"
+
+[params]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true
+ShowBreadCrumbs = true
+ShowToc = true
+
+[params.homeInfoParams]
+Title = "👋 Hi，我是 Redou"
+Content = """
+这里是我的个人博客。
+
+记录游戏开发、像素画、AI、独立游戏，
+以及一些关于生活和成长的想法。
+
+慢慢做，慢慢记录。
+"""

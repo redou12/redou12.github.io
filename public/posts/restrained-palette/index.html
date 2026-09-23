@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用一个只有 5 个色值的色板做完整个站点，聊清楚每个颜色到底在干什么。">
+<title>一份克制的配色方案</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/restrained-palette/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="一份克制的配色方案">
+<meta property='og:description' content="用一个只有 5 个色值的色板做完整个站点，聊清楚每个颜色到底在干什么。">
+<meta property='og:url' content='http://localhost:1313/posts/restrained-palette/'>
+<meta property='og:site_name' content='Redou的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='配色' /><meta property='article:tag' content='设计系统' /><meta property='article:tag' content='颜色' /><meta property='article:published_time' content='2026-06-08T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-06-08T00:00:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/posts/restrained-palette/cover.png' />
+<meta name="twitter:title" content="一份克制的配色方案">
+<meta name="twitter:description" content="用一个只有 5 个色值的色板做完整个站点，聊清楚每个颜色到底在干什么。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/posts/restrained-palette/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="1080"
+                        height="1080"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🎮</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Redou的博客</a></h1>
+            <h2 class="site-description">记录游戏开发、像素画、AI 与独立游戏</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/redou12'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current'>
+            <a href='/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/gamedev/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                
+                <span>游戏开发</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pixelart/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>像素画记录</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/talk/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>杂谈分享</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#五这个数字是怎么来的">五这个数字是怎么来的</a></li>
+    <li><a href="#五个色值">五个色值</a></li>
+    <li><a href="#写成变量别写进具体的组件里">写成变量，别写进具体的组件里</a></li>
+    <li><a href="#暗色模式没有新增一个色">暗色模式没有新增一个色</a></li>
+    <li><a href="#怎么判断一套色板够不够克制">怎么判断一套色板够不够克制</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/posts/restrained-palette/">
+            <img alt="Featured image of post 一份克制的配色方案" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/restrained-palette/cover.png" srcset="/posts/restrained-palette/cover_hu_c268db61daab923d.png 800w, /posts/restrained-palette/cover.png 1600w" width="1600">
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E8%AE%BE%E8%AE%A1/" style="background-color: hsl(312, 60%, 84%); color: hsl(312, 60%, 15%);">
+                设计
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/restrained-palette/">一份克制的配色方案</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            用一个只有 5 个色值的色板做完整个站点，聊清楚每个颜色到底在干什么。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-06-08T00:00:00&#43;08:00'>2026年6月8日星期一</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 2 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#五这个数字是怎么来的">五这个数字是怎么来的</a></li>
+    <li><a href="#五个色值">五个色值</a></li>
+    <li><a href="#写成变量别写进具体的组件里">写成变量，别写进具体的组件里</a></li>
+    <li><a href="#暗色模式没有新增一个色">暗色模式没有新增一个色</a></li>
+    <li><a href="#怎么判断一套色板够不够克制">怎么判断一套色板够不够克制</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>同事第一次看到我的色板文件时问了一句：「就五个？」我理解他的意思——大多数设计稿一打开，右侧色板躺十几二十个色块，看起来才像认真做过。但我这套已经用了两年，主题换过一次，组件加了七八个，一直没觉得不够用。</p>
+<h2 id="五这个数字是怎么来的"><a href="#%e4%ba%94%e8%bf%99%e4%b8%aa%e6%95%b0%e5%ad%97%e6%98%af%e6%80%8e%e4%b9%88%e6%9d%a5%e7%9a%84" class="header-anchor"></a>五这个数字是怎么来的
+</h2><p>我不是先定「五个」再去配色，而是先列角色的。页面上真正需要被区分的状态其实很少：背景、正文、次要文字、可交互的东西、可交互的东西被指到时的样子。就这五种。多出来的颜色几乎都是这五种的稀释版本——浅一点的灰、深一点的绿——它们不承担新含义，只是在同一含义上讲音量。</p>
+<p>我真正动手删过一轮。原方案里还有一个用于分隔线的浅灰，<code>#E4E4E0</code>，用了大概四个月。后来我发现卡片自带的间距已经足够做分隔，那条线只是在替留白打补丁，于是一起删了。</p>
+<h2 id="五个色值"><a href="#%e4%ba%94%e4%b8%aa%e8%89%b2%e5%80%bc" class="header-anchor"></a>五个色值
+</h2><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>色值</th>
+					<th>用途</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>#FAF9F6</code></td>
+					<td>页面背景</td>
+					<td>暖白，比纯白低一点点刺眼度，长文阅读明显更稳</td>
+			</tr>
+			<tr>
+					<td><code>#1C1C1A</code></td>
+					<td>正文与标题</td>
+					<td>不用纯黑，留给暗色模式一点下调余地</td>
+			</tr>
+			<tr>
+					<td><code>#6B6B66</code></td>
+					<td>次要信息</td>
+					<td>日期、标签、图注，刚好达到 4.5:1 的对比度红线</td>
+			</tr>
+			<tr>
+					<td><code>#2F6B5E</code></td>
+					<td>链接与按钮</td>
+					<td>唯一的彩色，只出现在可以点的地方</td>
+			</tr>
+			<tr>
+					<td><code>#DCE9E4</code></td>
+					<td>悬停与选中</td>
+					<td>强调色的极淡版本，用来铺底，从不用于文字</td>
+			</tr>
+	</tbody>
+</table></div>
+<h2 id="写成变量别写进具体的组件里"><a href="#%e5%86%99%e6%88%90%e5%8f%98%e9%87%8f%e5%88%ab%e5%86%99%e8%bf%9b%e5%85%b7%e4%bd%93%e7%9a%84%e7%bb%84%e4%bb%b6%e9%87%8c" class="header-anchor"></a>写成变量，别写进具体的组件里
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--color-bg</span><span class="o">:</span> <span class="mh">#FAF9F6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--color-ink</span><span class="o">:</span> <span class="mh">#1C1C1A</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--color-muted</span><span class="o">:</span> <span class="mh">#6B6B66</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--color-accent</span><span class="o">:</span> <span class="mh">#2F6B5E</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--color-accent-soft</span><span class="o">:</span> <span class="mh">#DCE9E4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">--radius-card</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">--font-zh</span><span class="o">:</span> <span class="s2">&#34;PingFang SC&#34;</span><span class="o">,</span> <span class="s2">&#34;Microsoft YaHei&#34;</span><span class="o">,</span> <span class="ni">system-ui</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>把颜色写成变量的好处不是省字，而是让「加一个新色」变成一件需要解释的事。任何组件里直接出现十六进制值，我都要停下来问一句：它属于哪个角色？问过几次之后，大多数新色就自己消失了。</p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>让强调色只出现在可交互元素上。按钮、链接、当前选中项，仅此三类。遵守一两个月之后，页面上任何一处绿色都会自带「这里能点」的提示，读者不用学，我也省掉了大量图标和箭头。</p>
+        </div>
+    </blockquote>
+<p><img alt="色板" class="gallery-image" data-flex-basis="480px" data-flex-grow="200" height="600" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/restrained-palette/figure.png" srcset="/posts/restrained-palette/figure_hu_36463f03fb817389.png 800w, /posts/restrained-palette/figure.png 1200w" width="1200"></p>
+<h2 id="暗色模式没有新增一个色"><a href="#%e6%9a%97%e8%89%b2%e6%a8%a1%e5%bc%8f%e6%b2%a1%e6%9c%89%e6%96%b0%e5%a2%9e%e4%b8%80%e4%b8%aa%e8%89%b2" class="header-anchor"></a>暗色模式没有新增一个色
+</h2><p>暗色主题上线时，我最担心的就是要不要再配一套。结果只换了两个值：背景变成 <code>#161715</code>，正文变成 <code>#EDECE7</code>。强调色保持 <code>#2F6B5E</code> 没动，因为它在这两个背景上的对比度都够。</p>
+<p>之所以能这么省，是因为前面所有组件都只引用变量。这也反过来验证了那五个角色定义得对不对——如果一个角色在两种主题下说得通，它就是个真角色；如果说不通，它多半是我硬凑出来的。</p>
+<h2 id="怎么判断一套色板够不够克制"><a href="#%e6%80%8e%e4%b9%88%e5%88%a4%e6%96%ad%e4%b8%80%e5%a5%97%e8%89%b2%e6%9d%bf%e5%a4%9f%e4%b8%8d%e5%a4%9f%e5%85%8b%e5%88%b6" class="header-anchor"></a>怎么判断一套色板够不够克制
+</h2><p>我有个很土的检查方法：把站点所有用色处截下来数一遍，出现少于三次的颜色全部删掉。删完页面通常会好一点点，偶尔会好很多。颜色多了不叫丰富，只是说明我还没想清楚哪个更重要。真要说这套方案教会我什么，大概是——克制不是省着用颜色，是让每个颜色都有事做。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E9%85%8D%E8%89%B2/">配色</a>
+        
+            <a href="/tags/%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F/">设计系统</a>
+        
+            <a href="/tags/%E9%A2%9C%E8%89%B2/">颜色</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文采用 <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/typography-three-rules/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 字体选择的三个笨办法" height="150" loading="lazy" src="/posts/typography-three-rules/cover_hu_702d143af3811478.png" srcset="/posts/typography-three-rules/cover_hu_702d143af3811478.png 1x, /posts/typography-three-rules/cover_hu_b75966ba939cfb48.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #a9847a80 0%, #98746cC0 100%);">
+            <h2 class="article-title">字体选择的三个笨办法</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/whitespace-breathing/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 留白不是空：界面的呼吸感" height="150" loading="lazy" src="/posts/whitespace-breathing/cover_hu_5cb1714fd37449da.png" srcset="/posts/whitespace-breathing/cover_hu_5cb1714fd37449da.png 1x, /posts/whitespace-breathing/cover_hu_ce6ef8994339c7b9.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #e1d6c480 0%, #ac946cC0 100%);">
+            <h2 class="article-title">留白不是空：界面的呼吸感</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="redou12/redou12.github.io"
+    data-repo-id="R_kgDOUh3EMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOUh3EM84DGQle"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 © 2026 Redou
+    </section>
+    
+    <section class="powerby">
+        
+            v2.0 · 由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b4a2bbf4b4f9da1ce8f60a2b613c222b0fee94349a795b90ca8164b82fcef525.js" defer></script>
+
+
+    </body>
+</html>

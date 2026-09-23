@@ -1,19 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Categories on Redou的博客</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Redou的博客</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>像素画</title>
-      <link>http://localhost:1313/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/</link>
-      <pubDate>Sun, 23 Aug 2026 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/</guid>
-      <description></description>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>技术 on Redou的博客</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Recent content in 技术 on Redou的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>© 2026 Redou</copyright>
+        <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>杂谈</title>
+            <link>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</link>
+            <pubDate>Thu, 24 Sep 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E6%9D%82%E8%B0%88/cover.png&#34; alt=&#34;Featured image of post 杂谈&#34; /&gt;</description>
+        </item><item>
+            <title>技术</title>
+            <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</link>
+            <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/cover.png&#34; alt=&#34;Featured image of post 技术&#34; /&gt;</description>
+        </item><item>
+            <title>阅读</title>
+            <link>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</link>
+            <pubDate>Sun, 06 Sep 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E9%98%85%E8%AF%BB/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E9%98%85%E8%AF%BB/cover.png&#34; alt=&#34;Featured image of post 阅读&#34; /&gt;</description>
+        </item><item>
+            <title>像素画</title>
+            <link>http://localhost:1313/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/</link>
+            <pubDate>Sun, 23 Aug 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/cover.png&#34; alt=&#34;Featured image of post 像素画&#34; /&gt;</description>
+        </item><item>
+            <title>设计</title>
+            <link>http://localhost:1313/categories/%E8%AE%BE%E8%AE%A1/</link>
+            <pubDate>Tue, 21 Jul 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E8%AE%BE%E8%AE%A1/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E8%AE%BE%E8%AE%A1/cover.png&#34; alt=&#34;Featured image of post 设计&#34; /&gt;</description>
+        </item><item>
+            <title>游戏开发</title>
+            <link>http://localhost:1313/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</link>
+            <pubDate>Tue, 14 Jan 2025 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</guid>
+            <description>&lt;img src=&#34;http://localhost:1313/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/cover.png&#34; alt=&#34;Featured image of post 游戏开发&#34; /&gt;</description>
+        </item></channel>
 </rss>

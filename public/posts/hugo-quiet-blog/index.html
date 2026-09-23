@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="从选主题到部署，把个人博客做成「不去打理也不会坏」的样子。">
+<title>用 Hugo 搭一个安静的博客</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/hugo-quiet-blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="用 Hugo 搭一个安静的博客">
+<meta property='og:description' content="从选主题到部署，把个人博客做成「不去打理也不会坏」的样子。">
+<meta property='og:url' content='http://localhost:1313/posts/hugo-quiet-blog/'>
+<meta property='og:site_name' content='Redou的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='静态站点' /><meta property='article:tag' content='极简主义' /><meta property='article:published_time' content='2026-08-16T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-08-16T00:00:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/posts/hugo-quiet-blog/cover.png' />
+<meta name="twitter:title" content="用 Hugo 搭一个安静的博客">
+<meta name="twitter:description" content="从选主题到部署，把个人博客做成「不去打理也不会坏」的样子。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/posts/hugo-quiet-blog/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="1080"
+                        height="1080"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🎮</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Redou的博客</a></h1>
+            <h2 class="site-description">记录游戏开发、像素画、AI 与独立游戏</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/redou12'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current'>
+            <a href='/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/gamedev/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                
+                <span>游戏开发</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pixelart/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>像素画记录</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/talk/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>杂谈分享</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#为什么是静态站点">为什么是静态站点</a></li>
+    <li><a href="#目录结构">目录结构</a></li>
+    <li><a href="#三个关键配置">三个关键配置</a></li>
+    <li><a href="#封面图不必是照片">封面图不必是照片</a></li>
+    <li><a href="#部署">部署</a></li>
+    <li><a href="#写在最后">写在最后</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/posts/hugo-quiet-blog/">
+            <img alt="Featured image of post 用 Hugo 搭一个安静的博客" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/hugo-quiet-blog/cover.png" srcset="/posts/hugo-quiet-blog/cover_hu_33b33778f70fa538.png 800w, /posts/hugo-quiet-blog/cover.png 1600w" width="1600">
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" style="background-color: hsl(154, 60%, 84%); color: hsl(154, 60%, 15%);">
+                技术
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/hugo-quiet-blog/">用 Hugo 搭一个安静的博客</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            从选主题到部署，把个人博客做成「不去打理也不会坏」的样子。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-08-16T00:00:00&#43;08:00'>2026年8月16日星期日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#为什么是静态站点">为什么是静态站点</a></li>
+    <li><a href="#目录结构">目录结构</a></li>
+    <li><a href="#三个关键配置">三个关键配置</a></li>
+    <li><a href="#封面图不必是照片">封面图不必是照片</a></li>
+    <li><a href="#部署">部署</a></li>
+    <li><a href="#写在最后">写在最后</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>我上一次认真写博客，是在一个需要登录、需要等编辑器加载、偶尔还会吞掉草稿的后台里。后来那个服务关了，几年积累的东西跟着一起消失。这件事让我下定决心：博客的正文必须是纯文本，托管必须是一次配置、长期不动的那种。</p>
+<p>于是就有了现在这个站点：Hugo 生成，Stack 主题，所有文章都是 Markdown 文件，构建一次得到一堆 HTML。没有数据库，没有后台，没有需要我每月登录一次的控制台。</p>
+<h2 id="为什么是静态站点"><a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%98%af%e9%9d%99%e6%80%81%e7%ab%99%e7%82%b9" class="header-anchor"></a>为什么是静态站点
+</h2><p>静态站点生成器这几年没什么新鲜故事，它的好处也一直没变过：</p>
+<ul>
+<li><strong>快</strong>。整站就是 HTML 和图片，首次渲染不需要等接口。</li>
+<li><strong>稳</strong>。没有运行时，就没有运行时漏洞和插件升级。</li>
+<li><strong>可迁移</strong>。换台电脑，只要有 Hugo 和这个仓库，站点就还能构建出来。</li>
+</ul>
+<p>代价当然也有：评论、搜索、访问统计这些&quot;动态&quot;能力，要么用第三方，要么就不要。我选了后者——搜索用构建时生成的 JSON 索引，评论暂时不做，统计干脆不看。少一个后台，就少一份需要维护的东西。</p>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>静态站点不等于不能搜索。Hugo 可以在构建时把所有文章的纯文本导成一个 JSON，前端拿它做本地匹配，几十篇文章的规模完全够用，也不依赖任何服务。</p>
+        </div>
+    </blockquote>
+<h2 id="目录结构"><a href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" class="header-anchor"></a>目录结构
+</h2><p>我尽量让仓库的顶层保持干净，一眼能看出东西在哪：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">blog/
+</span></span><span class="line"><span class="cl">├─ config/_default/     # 站点与主题配置
+</span></span><span class="line"><span class="cl">├─ content/
+</span></span><span class="line"><span class="cl">│  ├─ post/             # 文章，一篇一个目录
+</span></span><span class="line"><span class="cl">│  └─ page/             # 关于、归档、搜索、友链
+</span></span><span class="line"><span class="cl">├─ assets/img/          # 头像、favicon
+</span></span><span class="line"><span class="cl">├─ assets/scss/         # 自定义样式，只改配色和字体
+</span></span><span class="line"><span class="cl">├─ scripts/             # 生成封面图的脚本
+</span></span><span class="line"><span class="cl">└─ themes/              # 主题（不纳入版本管理）
+</span></span></code></pre></div><p>文章用 page bundle 的形式，一篇一个目录，封面图、插图就和正文放在一起。这样删掉一篇文章只需要删一个目录，不会留下孤儿图片。</p>
+<h2 id="三个关键配置"><a href="#%e4%b8%89%e4%b8%aa%e5%85%b3%e9%94%ae%e9%85%8d%e7%bd%ae" class="header-anchor"></a>三个关键配置
+</h2><p>第一，让中文排版正常。Hugo 需要知道这是中日韩文本，否则字数统计和摘要截断都会出错：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hasCJKLanguage</span>         <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">locale</span>                 <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">timeZone</span>               <span class="p">=</span> <span class="s2">&#34;Asia/Shanghai&#34;</span>
+</span></span></code></pre></div><p>第二，把链接定死。短链接不只是好看，它意味着我以后换主题、换分类结构，旧链接依然有效：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/p/:slug/&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">page</span> <span class="p">=</span> <span class="s2">&#34;/:slug/&#34;</span>
+</span></span></code></pre></div><p>第三，用 <code>lastmod</code> 而不是重写文章。内容有更新时我只改 <code>lastmod</code>，正文里加一段&quot;补充于某月&quot;，读者能看出这篇文章在被维护，而不是被悄悄替换。</p>
+<h2 id="封面图不必是照片"><a href="#%e5%b0%81%e9%9d%a2%e5%9b%be%e4%b8%8d%e5%bf%85%e6%98%af%e7%85%a7%e7%89%87" class="header-anchor"></a>封面图不必是照片
+</h2><p>我一开始到处找免费图库，后来发现真正的问题不是版权，而是<strong>风格不统一</strong>：九篇文章九种色调，列表页像拼贴。最后我写了个几十行的 Node 脚本，用渐变加一个几何母题批量生成封面——同一个构图，不同的色相。</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>做法</th>
+					<th>生成时间</th>
+					<th>风格一致性</th>
+					<th>版权风险</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>图库照片</td>
+					<td>每篇十分钟</td>
+					<td>差</td>
+					<td>需要逐张确认</td>
+			</tr>
+			<tr>
+					<td>自己拍</td>
+					<td>看天气</td>
+					<td>中</td>
+					<td>无</td>
+			</tr>
+			<tr>
+					<td>程序生成</td>
+					<td>一次一秒</td>
+					<td>好</td>
+					<td>无</td>
+			</tr>
+	</tbody>
+</table></div>
+<p>脚本不依赖任何第三方库，PNG 编码是手写的，跑一次生成整站素材。</p>
+<p><img alt="同一套构图的封面" class="gallery-image" data-flex-basis="480px" data-flex-grow="200" height="600" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/hugo-quiet-blog/figure.png" srcset="/posts/hugo-quiet-blog/figure_hu_7693bab2c4871a33.png 800w, /posts/hugo-quiet-blog/figure.png 1200w" width="1200"></p>
+<h2 id="部署"><a href="#%e9%83%a8%e7%bd%b2" class="header-anchor"></a>部署
+</h2><p>构建命令只有一行，产物是纯静态目录，扔到任何地方都能跑：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo --gc --minify --baseURL <span class="s2">&#34;https://example.com/&#34;</span>
+</span></span></code></pre></div><p>我现在是本地构建后同步 <code>public/</code> 目录，五分钟能搞定。等哪天觉得手动太麻烦，再让 CI 在提交时自动构建也不迟——但那是以后的事，现在这套东西已经够用了。</p>
+<h2 id="写在最后"><a href="#%e5%86%99%e5%9c%a8%e6%9c%80%e5%90%8e" class="header-anchor"></a>写在最后
+</h2><p>这个博客没有阅读量，没有订阅按钮，也不打算有。它的作用更像是给自己留的一间书房：偶尔进来写点东西，把想清楚的、没想清楚的一并放好。工具越安静，写字的念头就越容易留住。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9/">静态站点</a>
+        
+            <a href="/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89/">极简主义</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文采用 <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 用 AI + CMD 整理电脑文件" height="150" loading="lazy" src="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_10ac9a039f767cde.png" srcset="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_10ac9a039f767cde.png 1x, /posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_c06e13566d4f85e2.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #526f8980 0%, #445b6fC0 100%);">
+            <h2 class="article-title">用 AI &#43; CMD 整理电脑文件</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/plain-text-notes/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 为什么我把笔记从云端搬回了本地纯文本" height="150" loading="lazy" src="/posts/plain-text-notes/cover_hu_62469513c2df23ac.png" srcset="/posts/plain-text-notes/cover_hu_62469513c2df23ac.png 1x, /posts/plain-text-notes/cover_hu_a82d9a08981a169f.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #6e896d80 0%, #5b725aC0 100%);">
+            <h2 class="article-title">为什么我把笔记从云端搬回了本地纯文本</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/git-commit-convention/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 写给自己的 Git 提交规范" height="150" loading="lazy" src="/posts/git-commit-convention/cover_hu_47e9c2674b2ea658.png" srcset="/posts/git-commit-convention/cover_hu_47e9c2674b2ea658.png 1x, /posts/git-commit-convention/cover_hu_aaf1c3aea859ca51.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #d1d1d080 0%, #3a4250C0 100%);">
+            <h2 class="article-title">写给自己的 Git 提交规范</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="redou12/redou12.github.io"
+    data-repo-id="R_kgDOUh3EMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOUh3EM84DGQle"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 © 2026 Redou
+    </section>
+    
+    <section class="powerby">
+        
+            v2.0 · 由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b4a2bbf4b4f9da1ce8f60a2b613c222b0fee94349a795b90ca8164b82fcef525.js" defer></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="不是为了团队协作，只是为了让半年后的自己看懂当初改了什么。">
+<title>写给自己的 Git 提交规范</title>
+
+
+<link rel="canonical" href="http://localhost:1313/p/git-commit-convention/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="写给自己的 Git 提交规范">
+<meta property='og:description' content="不是为了团队协作，只是为了让半年后的自己看懂当初改了什么。">
+<meta property='og:url' content='http://localhost:1313/p/git-commit-convention/'>
+<meta property='og:site_name' content='屿光'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Git' /><meta property='article:tag' content='工程习惯' /><meta property='article:tag' content='效率' /><meta property='article:published_time' content='2025-11-08T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2025-11-08T00:00:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/p/git-commit-convention/cover.png' />
+<meta name="twitter:title" content="写给自己的 Git 提交规范">
+<meta name="twitter:description" content="不是为了团队协作，只是为了让半年后的自己看懂当初改了什么。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/git-commit-convention/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🌊</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">屿光</a></h1>
+            <h2 class="site-description">在喧嚣的世界里，留一盏安静的灯。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://x.com/'
+                        target="_blank"
+                        title="X / Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#标题行的三条规矩">标题行的三条规矩</a></li>
+    <li><a href="#类型前缀">类型前缀</a></li>
+    <li><a href="#正文写什么">正文写什么</a></li>
+    <li><a href="#关于提交粒度">关于提交粒度</a></li>
+    <li><a href="#最后">最后</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/p/git-commit-convention/">
+            <img alt="Featured image of post 写给自己的 Git 提交规范" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/p/git-commit-convention/cover.png" srcset="/p/git-commit-convention/cover_hu_10d94d6ca3e84b86.png 800w, /p/git-commit-convention/cover.png 1600w" width="1600">
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" style="background-color: hsl(154, 60%, 84%); color: hsl(154, 60%, 15%);">
+                技术
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/git-commit-convention/">写给自己的 Git 提交规范</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            不是为了团队协作，只是为了让半年后的自己看懂当初改了什么。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2025-11-08T00:00:00&#43;08:00'>2025年11月8日星期六</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#标题行的三条规矩">标题行的三条规矩</a></li>
+    <li><a href="#类型前缀">类型前缀</a></li>
+    <li><a href="#正文写什么">正文写什么</a></li>
+    <li><a href="#关于提交粒度">关于提交粒度</a></li>
+    <li><a href="#最后">最后</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>我的个人项目里，大部分提交只有我一个人看。按理说&quot;改了点东西&quot;这样的提交信息也没人管，但半年后回头查一处改动为什么发生，看到的就是自己当初随手打的字。所以我给自己定了一套规范，不复杂，但严格执行。</p>
+<h2 id="标题行的三条规矩"><a href="#%e6%a0%87%e9%a2%98%e8%a1%8c%e7%9a%84%e4%b8%89%e6%9d%a1%e8%a7%84%e7%9f%a9" class="header-anchor"></a>标题行的三条规矩
+</h2><p>提交信息的第一行是最重要的，因为 <code>git log --oneline</code> 只会显示它。</p>
+<ul>
+<li><strong>一行写完，不超过 50 个字符</strong>。终端不会折行，超出的部分会被截断。</li>
+<li><strong>用动词开头，说清楚做了什么</strong>。中文用&quot;修复/新增/重构/删除&quot;，英文用 <code>fix/add/refactor/remove</code>。</li>
+<li><strong>不写&quot;更新了文件&quot;这类无信息量的话</strong>。信息量为零的提交，等于没写。</li>
+</ul>
+<p>对比一下这两条：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 差
+</span></span><span class="line"><span class="cl">update code
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 好
+</span></span><span class="line"><span class="cl">fix: 修正分页在最后一页多出一页的问题
+</span></span></code></pre></div><p>第二条在半年后依然能被搜索到，第一条不能。</p>
+<h2 id="类型前缀"><a href="#%e7%b1%bb%e5%9e%8b%e5%89%8d%e7%bc%80" class="header-anchor"></a>类型前缀
+</h2><p>我用的是 Conventional Commits 的简化版，只保留自己真正常用的几类：</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>前缀</th>
+					<th>含义</th>
+					<th>什么时候用</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>feat</code></td>
+					<td>新功能</td>
+					<td>增加了用户能感知的能力</td>
+			</tr>
+			<tr>
+					<td><code>fix</code></td>
+					<td>修 bug</td>
+					<td>修正了错误行为</td>
+			</tr>
+			<tr>
+					<td><code>refactor</code></td>
+					<td>重构</td>
+					<td>行为不变，结构变了</td>
+			</tr>
+			<tr>
+					<td><code>docs</code></td>
+					<td>文档</td>
+					<td>只改注释、README</td>
+			</tr>
+			<tr>
+					<td><code>chore</code></td>
+					<td>杂务</td>
+					<td>依赖升级、配置调整</td>
+			</tr>
+			<tr>
+					<td><code>style</code></td>
+					<td>格式</td>
+					<td>只动空格、换行，不动逻辑</td>
+			</tr>
+	</tbody>
+</table></div>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>判断 <code>refactor</code> 还是 <code>fix</code> 有一个简单的办法：<strong>改完之后站点/程序的行为有没有变化？</strong> 有变化就是 feat 或 fix，没变化就是 refactor。这个判断只需要三秒，但能让历史记录干净很多。</p>
+        </div>
+    </blockquote>
+<h2 id="正文写什么"><a href="#%e6%ad%a3%e6%96%87%e5%86%99%e4%bb%80%e4%b9%88" class="header-anchor"></a>正文写什么
+</h2><p>标题行之外的内容不是必须的，但有两种情况我一定会写正文：</p>
+<p>第一，<strong>这个改动有取舍</strong>。为什么选 A 不选 B，当时考虑过什么方案。这类内容写在提交里比写在注释里合适，因为注释会随代码飘走，提交记录不会。</p>
+<p>第二，<strong>这个改动有副作用</strong>。比如&quot;删掉了旧的缓存逻辑，首次访问会慢 200ms&quot;，这种信息必须留下，否则下次性能问题又要重新调查一遍。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;refactor: 用构建时索引替换运行时搜索
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">搜索原先在浏览器里遍历全文，文章超过 30 篇后首次搜索要 1.2 秒。
+</span></span></span><span class="line"><span class="cl"><span class="s2">改为构建时生成 JSON 索引，前端只做匹配，首次搜索降到 80ms。
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">副作用：索引文件约 40KB，随站点一起发布。&#34;</span>
+</span></span></code></pre></div><p>多行提交信息在命令行里用一个 <code>-m</code> 加换行是可行的，但我更常在编辑器里写——<code>git commit</code> 不带参数会打开编辑器，反而更快。</p>
+<h2 id="关于提交粒度"><a href="#%e5%85%b3%e4%ba%8e%e6%8f%90%e4%ba%a4%e7%b2%92%e5%ba%a6" class="header-anchor"></a>关于提交粒度
+</h2><p>我给自己定的标准是：<strong>一个提交只做一件事，且能独立回滚</strong>。</p>
+<p>以前我经常攒一天的改动一次性提交，信息写成&quot;这周的活儿&quot;。后来有一次线上出问题，需要回滚其中一小部分，才发现根本拆不开。从那之后我改成完成一个小目标就提交一次，哪怕只是修好一个错别字。</p>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>提交频率高不等于历史混乱。混乱来自&quot;一个提交里塞了五件事&quot;，而不是提交次数多。粒度小、信息准的历史，用 <code>git log -S</code> 搜关键词时几乎是万能的。</p>
+        </div>
+    </blockquote>
+<h2 id="最后"><a href="#%e6%9c%80%e5%90%8e" class="header-anchor"></a>最后
+</h2><p>这套规范最实际的好处，不是让代码更好看，而是让<strong>未来的调查变便宜</strong>。当我想知道某个样式为什么这么写、某个依赖为什么锁在那个版本，<code>git log</code> 能直接给出答案，而不是让我对着一堆 <code>update</code> 发呆。</p>
+<p>一个人写代码，唯一的评审者就是时间。提交信息是写给时间看的。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/git/">Git</a>
+        
+            <a href="/tags/%E5%B7%A5%E7%A8%8B%E4%B9%A0%E6%83%AF/">工程习惯</a>
+        
+            <a href="/tags/%E6%95%88%E7%8E%87/">效率</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文采用 <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-quiet-blog/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 用 Hugo 搭一个安静的博客" height="150" loading="lazy" src="/p/hugo-quiet-blog/cover_hu_a6a2030c02e4c7c9.png" srcset="/p/hugo-quiet-blog/cover_hu_a6a2030c02e4c7c9.png 1x, /p/hugo-quiet-blog/cover_hu_6ee9d9b31e30d624.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #516e8980 0%, #486077C0 100%);">
+            <h2 class="article-title">用 Hugo 搭一个安静的博客</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/p/plain-text-notes/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 为什么我把笔记从云端搬回了本地纯文本" height="150" loading="lazy" src="/p/plain-text-notes/cover_hu_62469513c2df23ac.png" srcset="/p/plain-text-notes/cover_hu_62469513c2df23ac.png 1x, /p/plain-text-notes/cover_hu_a82d9a08981a169f.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #6e896d80 0%, #5b725aC0 100%);">
+            <h2 class="article-title">为什么我把笔记从云端搬回了本地纯文本</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="redou12/redou12.github.io"
+    data-repo-id="R_kgDOUh3EMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOUh3EM84DGQle"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2026 © 2026 Yuguang
+    </section>
+    
+    <section class="powerby">
+        
+            由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b4a2bbf4b4f9da1ce8f60a2b613c222b0fee94349a795b90ca8164b82fcef525.js" defer></script>
+
+
+    </body>
+</html>

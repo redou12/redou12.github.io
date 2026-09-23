@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Redou的博客</title>
+        <link>http://localhost:1313/page/</link>
+        <description>Recent content in Pages on Redou的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>© 2026 Redou</copyright>
+        <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>关于</title>
+            <link>http://localhost:1313/about/</link>
+            <pubDate>Sun, 04 Jan 2026 00:00:00 +0800</pubDate>
+            <guid>http://localhost:1313/about/</guid>
+            <description>&lt;p&gt;你好，我是 &lt;strong&gt;Redou&lt;/strong&gt;，一个写代码、也写字的人。&lt;/p&gt;&#xA;&lt;p&gt;这个站点叫「屿光」——取其安静：像水上的一座小岛，天黑之后还有一点光。它没有评论区，没有阅读量，也没有算法推荐，只是一间放在网上的书房。&lt;/p&gt;&#xA;&lt;h2 id=&#34;我在做什么&#34;&gt;&lt;a href=&#34;#%e6%88%91%e5%9c%a8%e5%81%9a%e4%bb%80%e4%b9%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我在做什么&#xA;&lt;/h2&gt;&lt;p&gt;白天写程序，主要和前端、静态站点、构建工具打交道；晚上读点书，偶尔把手边的想法整理成文章。我偏爱那些能用很久的东西：一把键盘、一支钢笔、一个十年还在维护的软件。&lt;/p&gt;&#xA;&lt;h2 id=&#34;关注的几件事&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e6%b3%a8%e7%9a%84%e5%87%a0%e4%bb%b6%e4%ba%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关注的几件事&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;简单&lt;/strong&gt;：能用一个文件解决的问题，不引入一个框架。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;可读&lt;/strong&gt;：无论是代码还是文章，第一读者都是半年后的自己。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;手写&lt;/strong&gt;：笔记、清单、日程，尽量落到纯文本上，而不是某个应用的云端。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;技能与工具&#34;&gt;&lt;a href=&#34;#%e6%8a%80%e8%83%bd%e4%b8%8e%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;技能与工具&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;语言&lt;/strong&gt;：JavaScript / TypeScript、Go（够用）、Shell&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;前端&lt;/strong&gt;：React、Vue、原生 CSS，偏好不加构建步骤的小项目&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;静态站点&lt;/strong&gt;：Hugo、Markdown、Git&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;编辑器&lt;/strong&gt;：VS Code 与 Neovim 轮换使用，配置文件都放在仓库里&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;关于这个站点&#34;&gt;&lt;a href=&#34;#%e5%85%b3%e4%ba%8e%e8%bf%99%e4%b8%aa%e7%ab%99%e7%82%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;关于这个站点&#xA;&lt;/h2&gt;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;项目&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;说明&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;生成器&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Hugo（Extended）&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;主题&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Stack，改了配色、字体与圆角&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;封面&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Node 脚本本地生成，无第三方图库&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;评论&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;开启&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;内容许可&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;CC BY-NC-SA 4.0&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;联系我&#34;&gt;&lt;a href=&#34;#%e8%81%94%e7%b3%bb%e6%88%91&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;联系我&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;邮件：&lt;a class=&#34;link&#34; href=&#34;484364584@qq.com&#34; &gt;484364584@qq.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/redou12&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;github.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;QQ：484364584&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&#xA;    &lt;blockquote&gt;&#xA;        &lt;p&gt;我写作的目的，只是把想清楚的事情放好；如果有人恰好路过并觉得有用，那是额外的运气。&lt;/p&gt;&#xA;&#xA;    &lt;/blockquote&gt;&#xA;</description>
+        </item><item>
+            <title>归档</title>
+            <link>http://localhost:1313/archives/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <guid>http://localhost:1313/archives/</guid>
+            <description></description>
+        </item><item>
+            <title>搜索</title>
+            <link>http://localhost:1313/search/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <guid>http://localhost:1313/search/</guid>
+            <description></description>
+        </item><item>
+            <title>友链</title>
+            <link>http://localhost:1313/friends/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <guid>http://localhost:1313/friends/</guid>
+            <description>&lt;p&gt;这里是我认识的一些朋友，以及我喜欢的个人网站。&lt;/p&gt;&#xA;&lt;h2 id=&#34;我的朋友&#34;&gt;&lt;a href=&#34;#%e6%88%91%e7%9a%84%e6%9c%8b%e5%8f%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;我的朋友&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://suxilan.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Suxilan&lt;/a&gt; 技术博主&lt;/li&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.atl-resurrection.top/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;ATLcnnd&lt;/a&gt; 喜欢折腾MC服务器领域&lt;/li&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.xqe2011.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;小企鹅xqe2011&lt;/a&gt; 一只技术企鹅&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;</description>
+        </item></channel>
+</rss>

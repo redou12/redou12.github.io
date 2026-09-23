@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一次关于「笔记到底属于谁」的搬迁，以及搬迁之后我改掉的三个习惯。">
+<title>为什么我把笔记从云端搬回了本地纯文本</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/plain-text-notes/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="为什么我把笔记从云端搬回了本地纯文本">
+<meta property='og:description' content="一次关于「笔记到底属于谁」的搬迁，以及搬迁之后我改掉的三个习惯。">
+<meta property='og:url' content='http://localhost:1313/posts/plain-text-notes/'>
+<meta property='og:site_name' content='Redou的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='笔记' /><meta property='article:tag' content='纯文本' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2026-03-19T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-03-19T00:00:00&#43;08:00'/><meta property='og:image' content='http://localhost:1313/posts/plain-text-notes/cover.png' />
+<meta name="twitter:title" content="为什么我把笔记从云端搬回了本地纯文本">
+<meta name="twitter:description" content="一次关于「笔记到底属于谁」的搬迁，以及搬迁之后我改掉的三个习惯。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/posts/plain-text-notes/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="1080"
+                        height="1080"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🎮</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Redou的博客</a></h1>
+            <h2 class="site-description">记录游戏开发、像素画、AI 与独立游戏</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/redou12'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current'>
+            <a href='/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/gamedev/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                
+                <span>游戏开发</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pixelart/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>像素画记录</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/talk/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>杂谈分享</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#三个让我下决心的瞬间">三个让我下决心的瞬间</a></li>
+    <li><a href="#现在这套长什么样">现在这套长什么样</a></li>
+    <li><a href="#搬迁之后改掉的三个习惯">搬迁之后改掉的三个习惯</a></li>
+    <li><a href="#一点代价">一点代价</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+    <div class="article-image">
+        <a href="/posts/plain-text-notes/">
+            <img alt="Featured image of post 为什么我把笔记从云端搬回了本地纯文本" height="900" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/plain-text-notes/cover.png" srcset="/posts/plain-text-notes/cover_hu_21e3763fa7d6c709.png 800w, /posts/plain-text-notes/cover.png 1600w" width="1600">
+        </a>
+    </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" style="background-color: hsl(154, 60%, 84%); color: hsl(154, 60%, 15%);">
+                技术
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/plain-text-notes/">为什么我把笔记从云端搬回了本地纯文本</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            一次关于「笔记到底属于谁」的搬迁，以及搬迁之后我改掉的三个习惯。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-03-19T00:00:00&#43;08:00'>2026年3月19日星期四</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 3 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#三个让我下决心的瞬间">三个让我下决心的瞬间</a></li>
+    <li><a href="#现在这套长什么样">现在这套长什么样</a></li>
+    <li><a href="#搬迁之后改掉的三个习惯">搬迁之后改掉的三个习惯</a></li>
+    <li><a href="#一点代价">一点代价</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>我的笔记搬过一次家，从某个云端知识库搬回了本地一个装满 <code>.md</code> 文件的目录。搬完之后我统计了一下：过去三年我写了 1400 多条笔记，其中被我再打开过的，不到 90 条。</p>
+<p>这不是工具的问题，是我的问题。但工具确实让这个问题变得更隐蔽——它把&quot;收集&quot;做得太顺手了，顺手到我以为自己在积累。</p>
+<h2 id="三个让我下决心的瞬间"><a href="#%e4%b8%89%e4%b8%aa%e8%ae%a9%e6%88%91%e4%b8%8b%e5%86%b3%e5%bf%83%e7%9a%84%e7%9e%ac%e9%97%b4" class="header-anchor"></a>三个让我下决心的瞬间
+</h2><p>第一个瞬间是搜索。我想找一句三年前记下的话，明明记得里面有&quot;熵&quot;这个字，却搜不出来——因为当时的我把它记在了一张图片里。云端笔记的全文搜索，对图片无能为力。</p>
+<p>第二个瞬间是导出。我想把某个笔记本整体备份，导出格式是一个 <code>.zip</code>，解开是几百个 HTML 文件，附件散落在另一个目录，链接全是相对路径。理论上可读，实际上不可用。</p>
+<p>第三个瞬间最简单：我在飞机上，想查一条笔记，界面转了三秒，然后告诉我&quot;网络不可用&quot;。</p>
+<blockquote class="alert alert-warning">
+        <div class="alert-header">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-title">警告</span>
+        </div>
+        <div class="alert-body">
+            <p>数据在别人的服务器上，不代表数据不存在，但<strong>访问权</strong>确实不在你手里。工具下线、账号异常、跨境访问变慢，任何一环出问题，你的笔记就只是别人硬盘上的一段字节。</p>
+        </div>
+    </blockquote>
+<h2 id="现在这套长什么样"><a href="#%e7%8e%b0%e5%9c%a8%e8%bf%99%e5%a5%97%e9%95%bf%e4%bb%80%e4%b9%88%e6%a0%b7" class="header-anchor"></a>现在这套长什么样
+</h2><p>规则只有三条：</p>
+<ol>
+<li>所有笔记是一个目录里的 Markdown 文件，中文文件名，按 <code>年/月</code> 分层。</li>
+<li>附件放在同级 <code>assets/</code> 目录，用相对路径引用，图片一律写清楚来源。</li>
+<li>同步只依赖 Git 和一块移动硬盘。没有客户端，没有订阅。</li>
+</ol>
+<p>目录大概是这样：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">notes/
+</span></span><span class="line"><span class="cl">├─ 2026/
+</span></span><span class="line"><span class="cl">│  ├─ 08-hugo-搭建.md
+</span></span><span class="line"><span class="cl">│  └─ 09-读书笔记.md
+</span></span><span class="line"><span class="cl">├─ assets/
+</span></span><span class="line"><span class="cl">│  └─ 2026-09-封面.png
+</span></span><span class="line"><span class="cl">└─ index.md
+</span></span></code></pre></div><h2 id="搬迁之后改掉的三个习惯"><a href="#%e6%90%ac%e8%bf%81%e4%b9%8b%e5%90%8e%e6%94%b9%e6%8e%89%e7%9a%84%e4%b8%89%e4%b8%aa%e4%b9%a0%e6%83%af" class="header-anchor"></a>搬迁之后改掉的三个习惯
+</h2><p><strong>不记链接，记结论。</strong> 以前我看到一篇好文章，第一反应是存链接，配一句&quot;以后细看&quot;。现在我强迫自己当场写三行：这篇文章解决了什么问题、它的结论是什么、我打算怎么用。写不出三行，就不存。</p>
+<p><strong>不建目录，先写再说。</strong> 我过去的笔记结构是一棵精心设计的树，结果每次写东西都要先想&quot;这条该放哪个分类&quot;，想着想着就不写了。现在全部平铺，靠文件名和搜索找。文件数上了两千再考虑分治，现在远没到。</p>
+<p><strong>每周做一次删除。</strong> 这条最有用。每周花二十分钟，把这一周记的东西过一遍，删掉一半。留下来的才会被认真整理。我甚至给删除设了个门槛：一条笔记如果三个月内没有被任何其它笔记引用过，它大概率是噪音。</p>
+<h2 id="一点代价"><a href="#%e4%b8%80%e7%82%b9%e4%bb%a3%e4%bb%b7" class="header-anchor"></a>一点代价
+</h2><p>纯文本方案不是没有缺点。手机端体验很差——我至今没有找到一个在手机上舒服编辑 Markdown 的办法，所以手机只用来记一行字的碎片，正式整理一律回到电脑上。这反而成了优点：碎片和成文被物理隔开了。</p>
+<p>另一个代价是搜索依赖工具。我用的是命令行里的模糊搜索，配合编辑器自带的正则查找，够用但不算优雅。好在这些都建立在文件系统之上，随时可以换。</p>
+<h2 id="结语"><a href="#%e7%bb%93%e8%af%ad" class="header-anchor"></a>结语
+</h2><p>搬迁之后我最大的感受是：笔记工具的选择，本质上是在选择<strong>你和信息之间的关系</strong>。如果你希望它替你思考，那就选功能最多的那个；如果你希望它只是一个放东西的地方，那纯文本目录就已经足够，而且二十年后还能打开。</p>
+<p>我现在属于后者。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+        
+            <a href="/tags/%E7%BA%AF%E6%96%87%E6%9C%AC/">纯文本</a>
+        
+            <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文采用 <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 用 AI + CMD 整理电脑文件" height="150" loading="lazy" src="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_10ac9a039f767cde.png" srcset="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_10ac9a039f767cde.png 1x, /posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_c06e13566d4f85e2.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #526f8980 0%, #445b6fC0 100%);">
+            <h2 class="article-title">用 AI &#43; CMD 整理电脑文件</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/hugo-quiet-blog/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 用 Hugo 搭一个安静的博客" height="150" loading="lazy" src="/posts/hugo-quiet-blog/cover_hu_a6a2030c02e4c7c9.png" srcset="/posts/hugo-quiet-blog/cover_hu_a6a2030c02e4c7c9.png 1x, /posts/hugo-quiet-blog/cover_hu_6ee9d9b31e30d624.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #516e8980 0%, #486077C0 100%);">
+            <h2 class="article-title">用 Hugo 搭一个安静的博客</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/git-commit-convention/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 写给自己的 Git 提交规范" height="150" loading="lazy" src="/posts/git-commit-convention/cover_hu_47e9c2674b2ea658.png" srcset="/posts/git-commit-convention/cover_hu_47e9c2674b2ea658.png 1x, /posts/git-commit-convention/cover_hu_aaf1c3aea859ca51.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #d1d1d080 0%, #3a4250C0 100%);">
+            <h2 class="article-title">写给自己的 Git 提交规范</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="redou12/redou12.github.io"
+    data-repo-id="R_kgDOUh3EMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOUh3EM84DGQle"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 © 2026 Redou
+    </section>
+    
+    <section class="powerby">
+        
+            v2.0 · 由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b4a2bbf4b4f9da1ce8f60a2b613c222b0fee94349a795b90ca8164b82fcef525.js" defer></script>
+
+
+    </body>
+</html>

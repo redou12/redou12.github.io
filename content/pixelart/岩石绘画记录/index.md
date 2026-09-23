@@ -3,7 +3,7 @@ title: "像素画练习：岩石"
 description: "第一次用 Aseprite 画岩石：从调整轮廓到增加明暗变化的一点记录。"
 date: 2026-08-23
 slug: "岩石绘画记录"
-image: cover.png
+image: /rock.png
 categories:
     - 像素画
 tags:

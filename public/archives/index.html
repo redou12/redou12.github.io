@@ -1,286 +1,651 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="按时间查看所有文章">
+<title>归档</title>
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>归档 | Redou的博客</title>
-<meta name="keywords" content="">
-<meta name="description" content="按时间查看所有文章">
-<meta name="author" content="Redou">
+
 <link rel="canonical" href="http://localhost:1313/archives/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/archives/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="归档">
+<meta property='og:description' content="按时间查看所有文章">
+<meta property='og:url' content='http://localhost:1313/archives/'>
+<meta property='og:site_name' content='Redou的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Page' />
+<meta name="twitter:title" content="归档">
+<meta name="twitter:description" content="按时间查看所有文章">
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="template-archives">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
         }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
+    })();
 </script>
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Redou的博客 (Alt + H)">Redou的博客</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="1080"
+                        height="1080"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🎮</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Redou的博客</a></h1>
+            <h2 class="site-description">记录游戏开发、像素画、AI 与独立游戏</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/redou12'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/gamedev/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                
+                <span>游戏开发</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pixelart/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>像素画记录</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/talk/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>杂谈分享</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current'>
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <header>
+        <h2 class="section-title">分类</h2>
+        <div class="subsection-list">
+            <div class="article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E6%9D%82%E8%B0%88/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 杂谈" height="150" loading="lazy" src="/categories/%E6%9D%82%E8%B0%88/cover_hu_36a41c2d810cf04f.png" srcset="/categories/%E6%9D%82%E8%B0%88/cover_hu_36a41c2d810cf04f.png 1x, /categories/%E6%9D%82%E8%B0%88/cover_hu_719eb62709cb510d.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #b5866180 0%, #a37554C0 100%);">
+            <h2 class="article-title">杂谈</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E6%8A%80%E6%9C%AF/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 技术" height="150" loading="lazy" src="/categories/%E6%8A%80%E6%9C%AF/cover_hu_5e6f0681e06023c3.png" srcset="/categories/%E6%8A%80%E6%9C%AF/cover_hu_5e6f0681e06023c3.png 1x, /categories/%E6%8A%80%E6%9C%AF/cover_hu_77492e96eb796bec.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #d1d3d280 0%, #415061C0 100%);">
+            <h2 class="article-title">技术</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E9%98%85%E8%AF%BB/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 阅读" height="150" loading="lazy" src="/categories/%E9%98%85%E8%AF%BB/cover_hu_85faf5437eb7740e.png" srcset="/categories/%E9%98%85%E8%AF%BB/cover_hu_85faf5437eb7740e.png 1x, /categories/%E9%98%85%E8%AF%BB/cover_hu_456353023f2f5ab6.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #47757880 0%, #5a8c8eC0 100%);">
+            <h2 class="article-title">阅读</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 像素画" height="150" loading="lazy" src="/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/cover_hu_ac257ff1c2919265.png" srcset="/categories/%E5%83%8F%E7%B4%A0%E7%94%BB/cover_hu_ac257ff1c2919265.png 1x, /categories/%E5%83%8F%E7%B4%A0%E7%94%BB/cover_hu_f6d3a78eb20e2ba3.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #827c7480 0%, #6b6761C0 100%);">
+            <h2 class="article-title">像素画</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E8%AE%BE%E8%AE%A1/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 设计" height="150" loading="lazy" src="/categories/%E8%AE%BE%E8%AE%A1/cover_hu_d0aa4a5fe2e8d339.png" srcset="/categories/%E8%AE%BE%E8%AE%A1/cover_hu_d0aa4a5fe2e8d339.png 1x, /categories/%E8%AE%BE%E8%AE%A1/cover_hu_cea817dd05605925.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #cdb99780 0%, #ac946cC0 100%);">
+            <h2 class="article-title">设计</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 游戏开发" height="150" loading="lazy" src="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/cover_hu_4d4994b0879c461c.png" srcset="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/cover_hu_4d4994b0879c461c.png 1x, /categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/cover_hu_4735c84cf72fe7e0.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #70638880 0%, #615575C0 100%);">
+            <h2 class="article-title">游戏开发</h2>
+        </div>
+    </a>
+</article>
+                
             </div>
         </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span>文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/search/" title="搜索">
-                    <span>搜索</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/friends/" title="友链">
-                    <span>友链</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="归档">
-                    <span class="active">归档</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="关于我">
-                    <span>关于我</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+        
+    </header>
 
-<header class="page-header">
-  <h1>
-    归档
-  </h1>
-</header>
-<div class="archive-year">
-  <h2 class="archive-year-header" id="2026">
-    <a class="archive-header-link" href="#2026">2026</a>
-    <sup class="archive-count">&nbsp;1</sup>
-  </h2>
-  <div class="archive-month">
-    <h3 class="archive-month-header" id="2026-September">
-      <a class="archive-header-link" href="#2026-September">September</a>
-      <sup class="archive-count">&nbsp;1</sup>
-    </h3>
-    <div class="archive-posts">
-      <div class="archive-entry">
-        <h3 class="archive-entry-title entry-hint-parent">用 AI + CMD 整理电脑文件
-        </h3>
-        <div class="archive-meta">
-
-<span title='2026-09-23 00:00:00 +0800 CST'>September 23, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Redou</span></div>
-        <a class="entry-link" aria-label="post link to 用 AI &#43; CMD 整理电脑文件" href="http://localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/"></a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="archive-year">
-  <h2 class="archive-year-header" id="2025">
-    <a class="archive-header-link" href="#2025">2025</a>
-    <sup class="archive-count">&nbsp;1</sup>
-  </h2>
-  <div class="archive-month">
-    <h3 class="archive-month-header" id="2025-January">
-      <a class="archive-header-link" href="#2025-January">January</a>
-      <sup class="archive-count">&nbsp;1</sup>
-    </h3>
-    <div class="archive-posts">
-      <div class="archive-entry">
-        <h3 class="archive-entry-title entry-hint-parent">游戏的续作感想
-        </h3>
-        <div class="archive-meta">
-
-<span title='2025-01-14 07:07:07 +0100 +0100'>January 14, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Redou</span></div>
-        <a class="entry-link" aria-label="post link to 游戏的续作感想" href="http://localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/"></a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="archive-year">
-  <h2 class="archive-year-header" id="2024">
-    <a class="archive-header-link" href="#2024">2024</a>
-    <sup class="archive-count">&nbsp;1</sup>
-  </h2>
-  <div class="archive-month">
-    <h3 class="archive-month-header" id="2024-January">
-      <a class="archive-header-link" href="#2024-January">January</a>
-      <sup class="archive-count">&nbsp;1</sup>
-    </h3>
-    <div class="archive-posts">
-      <div class="archive-entry">
-        <h3 class="archive-entry-title entry-hint-parent">follow your passion真的是对的嘛？
-        </h3>
-        <div class="archive-meta">
-
-<span title='2024-01-14 07:07:07 +0100 +0100'>January 14, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Redou</span></div>
-        <a class="entry-link" aria-label="post link to follow your passion真的是对的嘛？" href="http://localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/"></a>
-      </div>
-    </div>
-  </div>
-</div>
-    </main>
     
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Redou的博客</a></span> · 
 
     
     
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <div class="archives-group" id="2026">
+        <h2 class="archives-date section-title"><a href="/archives/#2026">2026</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/posts/site-v2-upgrade/">
+        <div class="article-details">
+            <h2 class="article-title">站点升级说明 v2.0：从 PaperMod 迁移到 Stack</h2>
+                <footer class="article-meta"><time datetime="2026-09-24T00:00:00&#43;08:00">2026年9月24日星期四</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="站点升级说明 v2.0：从 PaperMod 迁移到 Stack" height="60" loading="lazy" src="/posts/site-v2-upgrade/cover_hu_74676d6e967e932d.png" srcset="/posts/site-v2-upgrade/cover_hu_74676d6e967e932d.png 1x, /posts/site-v2-upgrade/cover_hu_e57c1cf9f0b2a061.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/">
+        <div class="article-details">
+            <h2 class="article-title">用 AI &#43; CMD 整理电脑文件</h2>
+                <footer class="article-meta"><time datetime="2026-09-23T00:00:00&#43;08:00">2026年9月23日星期三</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="用 AI + CMD 整理电脑文件" height="60" loading="lazy" src="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_5545979ea402a464.png" srcset="/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_5545979ea402a464.png 1x, /posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/cover_hu_6c7f9f18c3dc99eb.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/reading-2026/">
+        <div class="article-details">
+            <h2 class="article-title">2026 年，我读完了这十二本书</h2>
+                <footer class="article-meta"><time datetime="2026-09-06T00:00:00&#43;08:00">2026年9月6日星期日</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="2026 年，我读完了这十二本书" height="60" loading="lazy" src="/posts/reading-2026/cover_hu_3de860ed6bb3a897.png" srcset="/posts/reading-2026/cover_hu_3de860ed6bb3a897.png 1x, /posts/reading-2026/cover_hu_93d745b0bfaf46ad.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/hugo-quiet-blog/">
+        <div class="article-details">
+            <h2 class="article-title">用 Hugo 搭一个安静的博客</h2>
+                <footer class="article-meta"><time datetime="2026-08-16T00:00:00&#43;08:00">2026年8月16日星期日</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="用 Hugo 搭一个安静的博客" height="60" loading="lazy" src="/posts/hugo-quiet-blog/cover_hu_e4591cdda23aa0e0.png" srcset="/posts/hugo-quiet-blog/cover_hu_e4591cdda23aa0e0.png 1x, /posts/hugo-quiet-blog/cover_hu_b42fb085a150d4b9.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/typography-three-rules/">
+        <div class="article-details">
+            <h2 class="article-title">字体选择的三个笨办法</h2>
+                <footer class="article-meta"><time datetime="2026-07-21T00:00:00&#43;08:00">2026年7月21日星期二</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="字体选择的三个笨办法" height="60" loading="lazy" src="/posts/typography-three-rules/cover_hu_3841e80ecd2e9d71.png" srcset="/posts/typography-three-rules/cover_hu_3841e80ecd2e9d71.png 1x, /posts/typography-three-rules/cover_hu_dcdd32530543665d.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/restrained-palette/">
+        <div class="article-details">
+            <h2 class="article-title">一份克制的配色方案</h2>
+                <footer class="article-meta"><time datetime="2026-06-08T00:00:00&#43;08:00">2026年6月8日星期一</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="一份克制的配色方案" height="60" loading="lazy" src="/posts/restrained-palette/cover_hu_b135751ee0a63e41.png" srcset="/posts/restrained-palette/cover_hu_b135751ee0a63e41.png 1x, /posts/restrained-palette/cover_hu_efecf0ca190c2e0.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/whitespace-breathing/">
+        <div class="article-details">
+            <h2 class="article-title">留白不是空：界面的呼吸感</h2>
+                <footer class="article-meta"><time datetime="2026-05-12T00:00:00&#43;08:00">2026年5月12日星期二</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="留白不是空：界面的呼吸感" height="60" loading="lazy" src="/posts/whitespace-breathing/cover_hu_e994dd03251b76bb.png" srcset="/posts/whitespace-breathing/cover_hu_e994dd03251b76bb.png 1x, /posts/whitespace-breathing/cover_hu_82d6605280334b92.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/plain-text-notes/">
+        <div class="article-details">
+            <h2 class="article-title">为什么我把笔记从云端搬回了本地纯文本</h2>
+                <footer class="article-meta"><time datetime="2026-03-19T00:00:00&#43;08:00">2026年3月19日星期四</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="为什么我把笔记从云端搬回了本地纯文本" height="60" loading="lazy" src="/posts/plain-text-notes/cover_hu_f54a6c00cf84ff11.png" srcset="/posts/plain-text-notes/cover_hu_f54a6c00cf84ff11.png 1x, /posts/plain-text-notes/cover_hu_24cc7fe63eb13c0b.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/zen-motorcycle/">
+        <div class="article-details">
+            <h2 class="article-title">重读《禅与摩托车维修艺术》</h2>
+                <footer class="article-meta"><time datetime="2026-02-27T00:00:00&#43;08:00">2026年2月27日星期五</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="重读《禅与摩托车维修艺术》" height="60" loading="lazy" src="/posts/zen-motorcycle/cover_hu_67f27cfe531a9d5f.png" srcset="/posts/zen-motorcycle/cover_hu_67f27cfe531a9d5f.png 1x, /posts/zen-motorcycle/cover_hu_191ea603c7f3480.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+    
+    <div class="archives-group" id="2025">
+        <h2 class="archives-date section-title"><a href="/archives/#2025">2025</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/posts/walden-and-tech/">
+        <div class="article-details">
+            <h2 class="article-title">《瓦尔登湖》与低欲望的技术生活</h2>
+                <footer class="article-meta"><time datetime="2025-12-14T00:00:00&#43;08:00">2025年12月14日星期日</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="《瓦尔登湖》与低欲望的技术生活" height="60" loading="lazy" src="/posts/walden-and-tech/cover_hu_cb86890b7132ed77.png" srcset="/posts/walden-and-tech/cover_hu_cb86890b7132ed77.png 1x, /posts/walden-and-tech/cover_hu_23c1c7f4ed53963b.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/git-commit-convention/">
+        <div class="article-details">
+            <h2 class="article-title">写给自己的 Git 提交规范</h2>
+                <footer class="article-meta"><time datetime="2025-11-08T00:00:00&#43;08:00">2025年11月8日星期六</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="写给自己的 Git 提交规范" height="60" loading="lazy" src="/posts/git-commit-convention/cover_hu_4bf216ff0adf0ce1.png" srcset="/posts/git-commit-convention/cover_hu_4bf216ff0adf0ce1.png 1x, /posts/git-commit-convention/cover_hu_8d053cbcc0da76d6.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+                <article>
+    <a href="/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/">
+        <div class="article-details">
+            <h2 class="article-title">游戏的续作感想</h2>
+                <footer class="article-meta"><time datetime="2025-01-14T00:00:00&#43;08:00">2025年1月14日星期二</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="游戏的续作感想" height="60" loading="lazy" src="/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/cover_hu_8be5f69d425851f4.png" srcset="/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/cover_hu_8be5f69d425851f4.png 1x, /posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/cover_hu_9407cd2bbc051fbb.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+    
+    <div class="archives-group" id="2024">
+        <h2 class="archives-date section-title"><a href="/archives/#2024">2024</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/">
+        <div class="article-details">
+            <h2 class="article-title">follow your passion真的是对的嘛？</h2>
+                <footer class="article-meta"><time datetime="2024-01-14T00:00:00&#43;08:00">2024年1月14日星期日</time>
+                </footer></div>
+        <div class="article-image">
+            <img alt="follow your passion真的是对的嘛？" height="60" loading="lazy" src="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_c970cda5946a10b.png" srcset="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_c970cda5946a10b.png 1x, /posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_708c269fa8574c95.png 2x" width="60">
+
+        </div>
+        
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 © 2026 Redou
+    </section>
+    
+    <section class="powerby">
+        
+            v2.0 · 由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
 </footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
 
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
+
+            </main>
+        </div>
         
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+<script type="text/javascript" src="/ts/main.b4a2bbf4b4f9da1ce8f60a2b613c222b0fee94349a795b90ca8164b82fcef525.js" defer></script>
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
 
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
+    </body>
 </html>

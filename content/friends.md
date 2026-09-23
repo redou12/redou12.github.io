@@ -8,4 +8,4 @@ title: "友链"
 
 - [Suxilan](https://suxilan.github.io/) 技术博主
 - [ATLcnnd](https://www.atl-resurrection.top/) 喜欢折腾MC服务器领域
-
+- [小企鹅xqe2011](https://blog.xqe2011.cn/) 一只技术企鹅

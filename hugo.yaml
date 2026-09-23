@@ -1,0 +1,47 @@
+baseURL: https://redou12.github.io/
+caches:
+  images:
+    dir: :cacheDir/images
+languageCode: zh-cn
+menu:
+  main:
+  - name: 文章
+    url: /posts/
+    weight: 10
+  - name: 游戏开发
+    url: /gamedev/
+    weight: 20
+  - name: 像素画记录
+    url: /pixelart/
+    weight: 30
+  - name: 杂谈分享
+    url: /talk/
+    weight: 40
+  - name: 友链
+    url: /friends/
+    weight: 50
+  - name: 归档
+    url: /archives/
+    weight: 60
+  - name: 关于我
+    url: /about/
+    weight: 70
+params:
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowToc: true
+  defaultTheme: auto
+  homeInfoParams:
+    Content: |
+      这里是我的个人博客。
+
+      记录游戏开发、像素画、AI、独立游戏，
+      以及一些关于生活和成长的想法。
+
+      慢慢做，慢慢记录。
+    Title: 👋 Hi，我是 Redou
+theme: PaperMod
+title: Redou的博客

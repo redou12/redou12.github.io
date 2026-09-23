@@ -12,6 +12,10 @@ ShowCodeCopyButtons = true
 ShowBreadCrumbs = true
 ShowToc = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params.homeInfoParams]
 Title = "👋 Hi，我是 Redou"
 Content = """

@@ -1,0 +1,26 @@
+{{- /*
+    v2.0 站点级覆盖：扩大搜索索引范围。
+
+    主题默认（layouts/page/search.json）只索引 mainSections（本站为 posts），
+    而旧站 PaperMod 的搜索覆盖所有页面，talk / pixelart 栏目的文章都能搜到。
+    这里改为索引全部常规页面，保持与旧站一致的搜索体验。
+    同时跳过正文为空的页面（归档页、搜索页本身），它们出现在结果里没有意义。
+*/ -}}
+
+{{- $pages := where site.RegularPages "Params.searchHidden" "!=" true -}}
+{{- $result := slice -}}
+
+{{- range $pages -}}
+    {{- if trim .Plain " \n\r\t" -}}
+        {{- $data := dict "title" .Title "date" .Date "permalink" .RelPermalink "content" .Plain -}}
+
+        {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+        {{- if $image -}}
+            {{- $data = merge $data (dict "image" $image.Permalink) -}}
+        {{- end -}}
+
+        {{- $result = $result | append $data -}}
+    {{- end -}}
+{{- end -}}
+
+{{ jsonify $result }}

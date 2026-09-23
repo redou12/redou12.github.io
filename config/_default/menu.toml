@@ -1,0 +1,20 @@
+# 侧栏社交图标
+# 可用图标见 themes/hugo-theme-stack/assets/icons/
+# 导航菜单（首页/文章/搜索…）在各自页面的 front matter 里声明
+
+[[social]]
+    identifier = "github"
+    name       = "GitHub"
+    url        = "https://github.com/redou12"
+
+    [social.params]
+        icon   = "brand-github"
+        newTab = true
+
+[[social]]
+    identifier = "rss"
+    name       = "RSS"
+    url        = "/index.xml"
+
+    [social.params]
+        icon = "rss"

@@ -1,0 +1,75 @@
+# ============================================================
+#  Redou的博客 · 站点基础配置
+#  v2.0：由 PaperMod 迁移到 Stack，配置从 hugo.yaml 拆分为 config/_default/
+# ============================================================
+
+baseURL   = "https://redou12.github.io/"
+title     = "Redou的博客"
+theme     = "hugo-theme-stack"
+copyright = "© 2026 Redou"
+
+# ---------- 语言与时区 ----------
+locale                 = "zh-cn"
+defaultContentLanguage = "zh"
+hasCJKLanguage         = true
+enableEmoji            = true
+enableRobotsTXT        = true
+timeZone               = "Asia/Shanghai"
+
+# ---------- 列表分页（沿用旧站每页 5 篇）----------
+[pagination]
+    pagerSize = 5
+
+# ---------- 固定链接 ----------
+# 文章保持原来的 /posts/<标题>/ 结构，老链接不会失效
+# 独立页面保持 /about/ /archives/ /friends/ /search/
+[permalinks]
+    page = "/:slug/"
+
+# ---------- 分类与标签 ----------
+[taxonomies]
+    category = "categories"
+    tag      = "tags"
+    series   = "series"
+
+# ---------- 输出格式 ----------
+# 搜索索引由 content/page/search 的 front matter 单独声明（HTML + JSON）
+[outputs]
+    home    = ["HTML", "RSS"]
+    section = ["HTML", "RSS"]
+    term    = ["HTML", "RSS"]
+
+# ---------- Markdown 渲染 ----------
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            # 允许在 Markdown 里直接写 HTML
+            unsafe = true
+
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel   = 4
+        ordered    = false
+
+    [markup.highlight]
+        noClasses          = false
+        codeFences         = true
+        guessSyntax        = true
+        lineNoStart        = 1
+        lineNos            = false
+        lineNumbersInTable = true
+        tabWidth           = 4
+
+# ---------- 相关文章 ----------
+[related]
+    includeNewer = true
+    threshold    = 60
+    toLower      = false
+
+    [[related.indices]]
+        name   = "tags"
+        weight = 100
+
+    [[related.indices]]
+        name   = "categories"
+        weight = 200

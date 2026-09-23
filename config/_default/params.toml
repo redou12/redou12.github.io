@@ -1,0 +1,71 @@
+# ============================================================
+#  Stack 主题参数
+#  未写在这里的项沿用主题默认值（themes/hugo-theme-stack/config）
+# ============================================================
+
+# 首页展示的文章栏目（旧站为 posts）
+mainSections   = ["posts"]
+rssFullContent = true
+favicon        = "img/favicon.png"
+
+# ---------- 页脚 ----------
+[footer]
+    since      = 2024
+    customText = "v2.0 · 由 Hugo 与 Stack 驱动"
+
+# ---------- 左侧栏 ----------
+[sidebar]
+    emoji    = "🎮"
+    subtitle = "记录游戏开发、像素画、AI 与独立游戏"
+    avatar   = "img/avatar.png"
+    compact  = false
+
+# ---------- 文章 ----------
+[article]
+    headingAnchor = true    # 标题旁的锚点
+    toc           = true    # 右侧目录
+    readingTime   = true    # 阅读时间
+    math          = false   # 不加载 KaTeX
+
+    [article.list]
+        showTags = true     # 列表页显示标签
+
+    [article.license]
+        enabled = true
+        default = "本文采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议，转载请注明出处。"
+
+# ---------- 配色方案 ----------
+[colorScheme]
+    toggle  = true
+    default = "auto"        # 跟随系统
+
+# ---------- 侧栏小部件 ----------
+[widgets]
+    homepage = [
+        { type = "search" },
+        { type = "archives", params = { limit = 5 } },
+        { type = "categories", params = { limit = 10 } },
+        { type = "tag-cloud", params = { limit = 20 } },
+    ]
+    page = [{ type = "toc" }]
+
+# ---------- 评论系统 ----------
+# 旧站没有评论，v2.0 继续保持关闭。
+# 想接入时把 enabled 改成 true，并填好对应 provider 的字段（下面是 giscus 模板）。
+[comments]
+    enabled  = false
+    provider = "giscus"
+
+    [comments.giscus]
+        repo             = ""            # 例如 "redou12/blog-comments"
+        repoID           = ""            # https://giscus.app 上生成
+        category         = "Announcements"
+        categoryID       = ""
+        mapping          = "pathname"
+        lightTheme       = "light"
+        darkTheme        = "dark_dimmed"
+        reactionsEnabled = 1
+        emitMetadata     = 0
+        inputPosition    = "top"
+        lang             = "zh-CN"
+        loading          = "lazy"

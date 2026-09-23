@@ -1,0 +1,65 @@
+name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 把 GitHub 仓库下载到 Actions 服务器
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # 2. 安装 Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.166.0'
+          extended: true
+
+      # 3. 准备 GitHub Pages
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # 4. 使用 Hugo 构建网站
+      - name: Build
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_path }}/"
+
+      # 5. 把 Hugo 生成的 public 上传给 Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      # 6. 发布到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

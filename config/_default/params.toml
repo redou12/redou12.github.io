@@ -53,14 +53,14 @@ favicon        = "img/favicon.png"
 # 旧站没有评论，v2.0 继续保持关闭。
 # 想接入时把 enabled 改成 true，并填好对应 provider 的字段（下面是 giscus 模板）。
 [comments]
-    enabled  = false
+    enabled  = true
     provider = "giscus"
 
     [comments.giscus]
-        repo             = ""            # 例如 "redou12/blog-comments"
-        repoID           = ""            # https://giscus.app 上生成
+        repo             = "redou12/redou12.github.io"            # 例如 "yourname/blog-comments"
+        repoID           = "R_kgDOUh3EMw"            # https://giscus.app 上生成
         category         = "Announcements"
-        categoryID       = ""
+        categoryID       = "DIC_kwDOUh3EM84DGQle"
         mapping          = "pathname"
         lightTheme       = "light"
         darkTheme        = "dark_dimmed"

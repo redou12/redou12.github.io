@@ -19,6 +19,27 @@
 &lt;p&gt;&lt;strong&gt;为什么不让 AI 帮我写 CMD？&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>简单的markdown语法笔记</title>
+      <link>http://localhost:1313/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;Markdown 是一种很简单的文本标记语言。&lt;/p&gt;
+&lt;p&gt;平时写博客、写笔记、整理文档的时候，我经常会用到它。刚开始接触的时候语法看起来有点多，其实常用的并不复杂。&lt;/p&gt;
+&lt;p&gt;这里记录一些最基础的 Markdown 语法，方便以后自己查阅。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>像素画练习：岩石</title>
+      <link>http://localhost:1313/pixelart/%E5%B2%A9%E7%9F%B3%E7%BB%98%E7%94%BB%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/pixelart/%E5%B2%A9%E7%9F%B3%E7%BB%98%E7%94%BB%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;今天试着画了一块岩石。&lt;/p&gt;
+&lt;p&gt;一开始觉得轮廓太规整，所以重新调整了一下边缘，
+然后增加了一些明暗变化。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;岩石练习&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/rock.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这是第一次尝试。&lt;/p&gt;
+&lt;p&gt;修改之后感觉自然了一些。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>游戏的续作感想</title>
       <link>http://localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</link>
       <pubDate>Tue, 14 Jan 2025 07:07:07 +0100</pubDate>

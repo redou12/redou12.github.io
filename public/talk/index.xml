@@ -6,6 +6,16 @@
     <description>Recent content on Redou的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单的markdown语法笔记</title>
+      <link>http://localhost:1313/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;Markdown 是一种很简单的文本标记语言。&lt;/p&gt;
+&lt;p&gt;平时写博客、写笔记、整理文档的时候，我经常会用到它。刚开始接触的时候语法看起来有点多，其实常用的并不复杂。&lt;/p&gt;
+&lt;p&gt;这里记录一些最基础的 Markdown 语法，方便以后自己查阅。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

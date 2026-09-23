@@ -91,7 +91,10 @@ params:
 
 menu:
   main:
-
+    - name: 首页
+      url: /
+      weight: 1
+      
     - name: 文章
       url: /posts/
       weight: 10

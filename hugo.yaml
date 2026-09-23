@@ -62,6 +62,7 @@ params:
     Title: "👋 Hi，我是 Redou"
     Content: |
       在此我会记录游戏开发、像素画、AI、独立游戏与生活思考。
+      [关于我](/about/)
 
   # GitHub
   socialIcons:
@@ -94,22 +95,14 @@ menu:
     - name: 首页
       url: /
       weight: 1
-      
+
     - name: 文章
       url: /posts/
       weight: 10
 
-    - name: 游戏开发
-      url: /gamedev/
+    - name: 搜索
+      url: /search/
       weight: 20
-
-    - name: 像素画记录
-      url: /pixelart/
-      weight: 30
-
-    - name: 杂谈分享
-      url: /talk/
-      weight: 40
 
     - name: 友链
       url: /friends/
@@ -122,6 +115,3 @@ menu:
     - name: 关于我
       url: /about/
       weight: 70
-    - name: 搜索
-      url: /search/
-      weight: 80

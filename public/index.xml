@@ -6,8 +6,66 @@
     <description>Recent content on Redou的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用 AI &#43; CMD 整理电脑文件</title>
+      <link>//localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;h1 id=&#34;用-ai--cmd-整理电脑文件&#34;&gt;用 AI + CMD 整理电脑文件&lt;/h1&gt;
+&lt;p&gt;最近整理电脑里的一个旧资料文件夹 &lt;code&gt;E:\yygg&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;里面有很多大学时期留下来的文件和文件夹，我本来准备手动整理，后来突然想到：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么不让 AI 帮我写 CMD？&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第一步让-ai-先帮我看目录&#34;&gt;第一步：让 AI 先帮我看目录&lt;/h2&gt;
+&lt;p&gt;我没有直接让 AI 修改文件，而是先让 CMD 列出目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;dir&lt;/span&gt; /b /ad
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后把结果复制给 AI。&lt;/p&gt;
+&lt;p&gt;我告诉 AI：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“这是我的文件夹结构，帮我整理一下，但不要太细，先给我分类方案，不要执行命令。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AI 根据实际内容给出了分类方案。&lt;/p&gt;
+&lt;p&gt;我发现分类太细，于是继续告诉它：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“感觉层级太多了，简单一点。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最后确定成：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;📚 学校
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;💼 工作
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;🎓 毕设
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;🧰 资源
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;👤 个人
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第二步让-ai-根据实际文件生成命令&#34;&gt;第二步：让 AI 根据实际文件生成命令&lt;/h2&gt;
+&lt;p&gt;进入具体文件夹后，我再次让 CMD 列出内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;dir&lt;/span&gt; /b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;把几十个文件名直接发给 AI，并告诉它：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“这次整理简单一点，只分四类：课程、作业、考试、其他。帮我生成明确的批量移动命令。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AI 根据文件名逐个判断，并生成：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📚 课程&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📝 作业&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🎓 考试&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📦 其他&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;move&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;BIM课设资料&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📚 课程\&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;move&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;工程经济学课设&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;📝 作业\&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;move&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;试卷&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;🎓 考试\&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我直接复制到 CMD 执行。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>游戏的续作感想</title>
+      <link>//localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</link>
+      <pubDate>Tue, 14 Jan 2025 07:07:07 +0100</pubDate>
+      <guid>//localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;1.敢于挑战原来的假设&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于续作的研发而言，你很容易觉得了解了这个系列的一切，所以你可以在很早期的时候就挑战原先的假设。团队每个人对于原作和续作的想法都会不同，如果一开始就挑战这些观念，可能会带来很多不同的想法，但来自不同背景的同事可以带来令人兴奋的灵感之源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.知道为什么做这个游戏&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当你做一款续作的时候，要知道为什么要做这个游戏，这样可以让你对整个游戏的故事、机制有更好的理解。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.创意的满足感是强大的工具&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很多时候，作为开发者我们大家都不喜欢做续作，但如果在研发的过程中能够找到独特之处，团队实际上会很享受这个体验，相互学习也可以让团队更有战斗力。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>follow your passion真的是对的嘛？</title>
       <link>//localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</link>
@@ -41,22 +99,17 @@
     </item>
     <item>
       <title></title>
+      <link>//localhost:1313/posts/second/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/second/</guid>
+      <description>&lt;p&gt;这是我的第3篇文章，欢迎你！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>//localhost:1313/posts/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/test/</guid>
       <description>&lt;p&gt;这是第二遍试试看呢&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>//localhost:1313/posts/%E7%BA%AA%E5%BF%B5%E7%A2%91%E8%B0%B7%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B8%B8%E6%88%8F%E7%9F%A5%E8%AF%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/%E7%BA%AA%E5%BF%B5%E7%A2%91%E8%B0%B7%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B8%B8%E6%88%8F%E7%9F%A5%E8%AF%86/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;1.敢于挑战原来的假设&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;对于续作的研发而言，你很容易觉得了解了这个系列的一切，所以你可以在很早期的时候就挑战原先的假设。团队每个人对于原作和续作的想法都会不同，如果一开始就挑战这些观念，可能会带来很多不同的想法，但来自不同背景的同事可以带来令人兴奋的灵感之源。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2.知道为什么做这个游戏&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;当你做一款续作的时候，要知道为什么要做这个游戏，这样可以让你对整个游戏的故事、机制有更好的理解。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3.创意的满足感是强大的工具&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;很多时候，作为开发者我们大家都不喜欢做续作，但如果在研发的过程中能够找到独特之处，团队实际上会很享受这个体验，相互学习也可以让团队更有战斗力。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

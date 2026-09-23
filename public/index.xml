@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Redou的博客</title>
-    <link>//localhost:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Redou的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用 AI &#43; CMD 整理电脑文件</title>
-      <link>//localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</link>
+      <link>http://localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</guid>
+      <guid>http://localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;h1 id=&#34;用-ai--cmd-整理电脑文件&#34;&gt;用 AI + CMD 整理电脑文件&lt;/h1&gt;
 &lt;p&gt;最近整理电脑里的一个旧资料文件夹 &lt;code&gt;E:\yygg&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;里面有很多大学时期留下来的文件和文件夹，我本来准备手动整理，后来突然想到：&lt;/p&gt;
@@ -56,9 +56,9 @@
     </item>
     <item>
       <title>游戏的续作感想</title>
-      <link>//localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</link>
+      <link>http://localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</link>
       <pubDate>Tue, 14 Jan 2025 07:07:07 +0100</pubDate>
-      <guid>//localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</guid>
+      <guid>http://localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</guid>
       <description>&lt;p&gt;&lt;strong&gt;1.敢于挑战原来的假设&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;对于续作的研发而言，你很容易觉得了解了这个系列的一切，所以你可以在很早期的时候就挑战原先的假设。团队每个人对于原作和续作的想法都会不同，如果一开始就挑战这些观念，可能会带来很多不同的想法，但来自不同背景的同事可以带来令人兴奋的灵感之源。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2.知道为什么做这个游戏&lt;/strong&gt;&lt;/p&gt;
@@ -68,9 +68,9 @@
     </item>
     <item>
       <title>follow your passion真的是对的嘛？</title>
-      <link>//localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</link>
+      <link>http://localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>//localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</guid>
+      <guid>http://localhost:1313/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/</guid>
       <description>&lt;h1 id=&#34;follow-your-passion真的是对的嘛&#34;&gt;follow your passion真的是对的嘛？&lt;/h1&gt;
 &lt;p&gt;从乔布斯的那场著名演讲开始，媒体便将“follow your passion”这个口号无限放大，营造出一种“必须先找到热爱，才能投入工作”的叙事。但这其实是一种倒果为因的误导。
 回顾乔布斯的真实经历：他是在旁听书法课、沉浸禅修等看似不相关的实践中，逐步将美学与科技融合，在深耕过程中才产生了巨大的热情。

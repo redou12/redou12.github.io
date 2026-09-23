@@ -1,8 +1,7 @@
-baseURL = "/"
+baseURL = "https://redou12.github.io/"
 languageCode = "zh-cn"
 title = "Redou的博客"
 theme = "PaperMod"
-
 [params]
 defaultTheme = "auto"
 ShowReadingTime = true
@@ -26,3 +25,37 @@ Content = """
 
 慢慢做，慢慢记录。
 """
+[[menu.main]]
+name = "文章"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "游戏开发"
+url = "/gamedev/"
+weight = 20
+
+[[menu.main]]
+name = "像素画记录"
+url = "/pixelart/"
+weight = 30
+
+[[menu.main]]
+name = "杂谈分享"
+url = "/talk/"
+weight = 40
+
+[[menu.main]]
+name = "友链"
+url = "/friends/"
+weight = 50
+
+[[menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 60
+
+[[menu.main]]
+name = "关于我"
+url = "/about/"
+weight = 70

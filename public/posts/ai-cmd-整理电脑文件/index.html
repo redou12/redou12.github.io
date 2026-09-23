@@ -10,44 +10,8 @@
 <meta name="description" content="用 AI &#43; CMD 整理电脑文件
 最近整理电脑里的一个旧资料文件夹 E:\yygg。
 里面有很多大学时期留下来的文件和文件夹，我本来准备手动整理，后来突然想到：
-为什么不让 AI 帮我写 CMD？
-第一步：让 AI 先帮我看目录
-我没有直接让 AI 修改文件，而是先让 CMD 列出目录：
-dir /b /ad
-然后把结果复制给 AI。
-我告诉 AI：
-
-“这是我的文件夹结构，帮我整理一下，但不要太细，先给我分类方案，不要执行命令。”
-
-AI 根据实际内容给出了分类方案。
-我发现分类太细，于是继续告诉它：
-
-“感觉层级太多了，简单一点。”
-
-最后确定成：
-📚 学校
-💼 工作
-🎓 毕设
-🧰 资源
-👤 个人
-第二步：让 AI 根据实际文件生成命令
-进入具体文件夹后，我再次让 CMD 列出内容：
-dir /b
-把几十个文件名直接发给 AI，并告诉它：
-
-“这次整理简单一点，只分四类：课程、作业、考试、其他。帮我生成明确的批量移动命令。”
-
-AI 根据文件名逐个判断，并生成：
-mkdir &#34;📚 课程&#34;
-mkdir &#34;📝 作业&#34;
-mkdir &#34;🎓 考试&#34;
-mkdir &#34;📦 其他&#34;
-
-move &#34;BIM课设资料&#34; &#34;📚 课程\&#34;
-move &#34;工程经济学课设&#34; &#34;📝 作业\&#34;
-move &#34;试卷&#34; &#34;🎓 考试\&#34;
-我直接复制到 CMD 执行。">
-<meta name="author" content="">
+为什么不让 AI 帮我写 CMD？">
+<meta name="author" content="Redou">
 <link rel="canonical" href="http://localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -193,7 +157,7 @@ move &#34;试卷&#34; &#34;🎓 考试\&#34;
     </h1>
     <div class="post-meta">
 
-<span title='2026-09-23 00:00:00 +0000 UTC'>September 23, 2026</span>&nbsp;·&nbsp;<span>1 min</span>
+<span title='2026-09-23 00:00:00 +0800 CST'>September 23, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Redou</span>
 
 </div>
   </header> <details class="toc" >

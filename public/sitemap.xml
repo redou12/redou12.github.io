@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-23T00:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-23T00:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/ai-cmd-%E6%95%B4%E7%90%86%E7%94%B5%E8%84%91%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2026-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-23T00:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/%E6%B8%B8%E6%88%8F%E7%9A%84%E7%BB%AD%E4%BD%9C%E6%84%9F%E6%83%B3/</loc>
     <lastmod>2025-01-14T07:07:07+01:00</lastmod>
@@ -24,6 +24,8 @@
     <loc>http://localhost:1313/talk/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>

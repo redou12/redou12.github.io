@@ -5,15 +5,12 @@ date: 2026-09-30
 draft: false
 description: "从梳理工作流、识别机械性工作，到 Skill、AI 学习和正确提问，记录一些普通人使用 AI 的方法。"
 tags:
-
-* AI
-* AI工具
-* 学习
-* 工作流
-* Agent
-  categories:
-* AI
-
+  - AI
+  - 就业
+  - 职业
+  - Agent
+categories:
+  - AI
 ---
 
 > 最近听了一个关于 AI 使用方式的播客，里面有一些非常实际的观点。

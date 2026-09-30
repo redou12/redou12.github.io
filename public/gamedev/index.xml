@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>游戏开发 on Redou的博客</title>
-        <link>http://localhost:1313/gamedev/</link>
+        <link>https://redou12.github.io/gamedev/</link>
         <description>Recent content in 游戏开发 on Redou的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>© 2026 Redou</copyright><atom:link href="http://localhost:1313/gamedev/index.xml" rel="self" type="application/rss+xml" /></channel>
+        <copyright>© 2026 Redou</copyright><atom:link href="https://redou12.github.io/gamedev/index.xml" rel="self" type="application/rss+xml" /></channel>
 </rss>

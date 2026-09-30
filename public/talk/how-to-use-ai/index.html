@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="从日常使用、信息获取、学习、Coding Agent 到工作流自动化，记录一些 AI 真正进入普通人工作方式的思考。">
+<title>普通人如何真正用好 AI</title>
+
+
+<link rel="canonical" href="https://redou12.github.io/talk/how-to-use-ai/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.57cc51acc7e77e36b60d8a0e52aadd6e0f16dbf33725a2058f7d3bcba7ded77b.css"><meta property='og:title' content="普通人如何真正用好 AI">
+<meta property='og:description' content="从日常使用、信息获取、学习、Coding Agent 到工作流自动化，记录一些 AI 真正进入普通人工作方式的思考。">
+<meta property='og:url' content='https://redou12.github.io/talk/how-to-use-ai/'>
+<meta property='og:site_name' content='Redou的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Talk' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Agent' /><meta property='article:tag' content='工作流' /><meta property='article:tag' content='学习' /><meta property='article:published_time' content='2026-09-30T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-09-30T00:00:00&#43;08:00'/>
+<meta name="twitter:title" content="普通人如何真正用好 AI">
+<meta name="twitter:description" content="从日常使用、信息获取、学习、Coding Agent 到工作流自动化，记录一些 AI 真正进入普通人工作方式的思考。">
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="1080"
+                        height="1080"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+                    <span class="emoji">🎮</span>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Redou的博客</a></h1>
+            <h2 class="site-description">记录游戏开发、像素画、AI 与独立游戏</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/redou12'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/gamedev/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+                
+                <span>游戏开发</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pixelart/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>像素画记录</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current'>
+            <a href='/talk/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>杂谈分享</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/friends/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#先不要抗拒-ai">先不要抗拒 AI</a></li>
+    <li><a href="#先拆解自己的工作">先拆解自己的工作</a></li>
+    <li><a href="#ai-正在降低入门陌生领域的成本">AI 正在降低“入门陌生领域”的成本</a></li>
+    <li><a href="#让-ai-成为信息过滤器">让 AI 成为信息过滤器</a></li>
+    <li><a href="#从-prompt-到-skill">从 Prompt 到 Skill</a></li>
+    <li><a href="#coding-agent-改变的不是写代码而是工作颗粒度">Coding Agent 改变的不是“写代码”，而是工作颗粒度</a></li>
+    <li><a href="#ai-最终会进入工作流">AI 最终会进入工作流</a></li>
+    <li><a href="#ai--原有专业">AI + 原有专业</a></li>
+    <li><a href="#给传统工科人的一点思考">给传统工科人的一点思考</a></li>
+    <li><a href="#最后">最后</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/%E6%9D%82%E8%B0%88/" style="background-color: hsl(22, 60%, 84%); color: hsl(22, 60%, 15%);">
+                杂谈
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/talk/how-to-use-ai/">普通人如何真正用好 AI</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            从日常使用、信息获取、学习、Coding Agent 到工作流自动化，记录一些 AI 真正进入普通人工作方式的思考。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-09-30T00:00:00&#43;08:00'>2026年9月30日星期三</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 4 分钟
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#先不要抗拒-ai">先不要抗拒 AI</a></li>
+    <li><a href="#先拆解自己的工作">先拆解自己的工作</a></li>
+    <li><a href="#ai-正在降低入门陌生领域的成本">AI 正在降低“入门陌生领域”的成本</a></li>
+    <li><a href="#让-ai-成为信息过滤器">让 AI 成为信息过滤器</a></li>
+    <li><a href="#从-prompt-到-skill">从 Prompt 到 Skill</a></li>
+    <li><a href="#coding-agent-改变的不是写代码而是工作颗粒度">Coding Agent 改变的不是“写代码”，而是工作颗粒度</a></li>
+    <li><a href="#ai-最终会进入工作流">AI 最终会进入工作流</a></li>
+    <li><a href="#ai--原有专业">AI + 原有专业</a></li>
+    <li><a href="#给传统工科人的一点思考">给传统工科人的一点思考</a></li>
+    <li><a href="#最后">最后</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>最近听了一个关于 AI 使用方式的播客，其中有一些观点让我觉得很值得记录。</p>
+<p>相比于“AI 到底有多强”，我更关心的是：</p>
+
+    <blockquote>
+        <p><strong>普通人到底应该怎么把 AI 真正用进自己的生活和工作？</strong></p>
+
+    </blockquote>
+<h2 id="先不要抗拒-ai"><a href="#%e5%85%88%e4%b8%8d%e8%a6%81%e6%8a%97%e6%8b%92-ai" class="header-anchor"></a>先不要抗拒 AI
+</h2><p>如果不是 AI 从业者，一开始没必要急着学习大量复杂技术。</p>
+<p>可以先从最简单的事情开始：</p>
+<ul>
+<li>问一个不会的问题</li>
+<li>总结一篇文章</li>
+<li>搜索陌生概念</li>
+<li>整理资料</li>
+<li>写一个初稿</li>
+<li>分析一个报错</li>
+</ul>
+<p>先让 AI 进入自己的日常。</p>
+<p>真正重要的第一步，不是学会多少工具，而是形成一个习惯：</p>
+
+    <blockquote>
+        <p><strong>遇到问题时，开始想到 AI。</strong></p>
+
+    </blockquote>
+<h2 id="先拆解自己的工作"><a href="#%e5%85%88%e6%8b%86%e8%a7%a3%e8%87%aa%e5%b7%b1%e7%9a%84%e5%b7%a5%e4%bd%9c" class="header-anchor"></a>先拆解自己的工作
+</h2><p>每天工作的时候，可以问自己：</p>
+
+    <blockquote>
+        <p>我今天到底做了哪些事情？</p>
+
+    </blockquote>
+<p>然后把工作拆开。</p>
+<p>有些事情非常机械，例如：</p>
+<ul>
+<li>搜索信息</li>
+<li>整理资料</li>
+<li>总结文本</li>
+<li>写初稿</li>
+<li>格式转换</li>
+<li>重复修改</li>
+</ul>
+<p>这些事情往往适合交给 AI。</p>
+<p>而判断、决策、沟通、处理特殊情况以及对结果负责，仍然需要人的参与。</p>
+<p>于是可以慢慢形成一个意识：</p>
+
+    <blockquote>
+        <p><strong>哪些事情应该交给 AI，哪些事情应该由自己负责？</strong></p>
+
+    </blockquote>
+<h2 id="ai-正在降低入门陌生领域的成本"><a href="#ai-%e6%ad%a3%e5%9c%a8%e9%99%8d%e4%bd%8e%e5%85%a5%e9%97%a8%e9%99%8c%e7%94%9f%e9%a2%86%e5%9f%9f%e7%9a%84%e6%88%90%e6%9c%ac" class="header-anchor"></a>AI 正在降低“入门陌生领域”的成本
+</h2><p>以前学习一个陌生领域，经常会遇到一个问题：</p>
+
+    <blockquote>
+        <p><strong>我甚至不知道应该搜索什么。</strong></p>
+
+    </blockquote>
+<p>现在可以直接告诉 AI：</p>
+
+    <blockquote>
+        <p>“我完全不了解这个领域，请告诉我核心概念、它们之间的关系，以及应该从哪里开始学习。”</p>
+
+    </blockquote>
+<p>AI 可以先帮你建立一张“认知地图”。</p>
+<p>这并不意味着人不需要学习，而是学习过程发生了变化：</p>
+
+    <blockquote>
+        <p><strong>从自己慢慢寻找入口，变成让 AI 帮自己快速建立入口，再进行验证和深入学习。</strong></p>
+
+    </blockquote>
+<h2 id="让-ai-成为信息过滤器"><a href="#%e8%ae%a9-ai-%e6%88%90%e4%b8%ba%e4%bf%a1%e6%81%af%e8%bf%87%e6%bb%a4%e5%99%a8" class="header-anchor"></a>让 AI 成为信息过滤器
+</h2><p>互联网每天都会产生大量论文、博客、项目和行业信息。</p>
+<p>一个人很难全部阅读。</p>
+<p>AI 可以先完成：</p>
+
+    <blockquote>
+        <p><strong>搜索 → 筛选 → 总结 → 提取重点</strong></p>
+
+    </blockquote>
+<p>人再去阅读真正值得关注的内容。</p>
+<p>我很喜欢把它理解成：</p>
+
+    <blockquote>
+        <p><strong>每天让 AI 给自己冲一杯“信息咖啡”。</strong></p>
+
+    </blockquote>
+<p>不一定要把所有信息读完，但至少要知道：</p>
+
+    <blockquote>
+        <p><strong>最近这个领域发生了什么。</strong></p>
+
+    </blockquote>
+<h2 id="从-prompt-到-skill"><a href="#%e4%bb%8e-prompt-%e5%88%b0-skill" class="header-anchor"></a>从 Prompt 到 Skill
+</h2><p>如果每天都让 AI 做同一类事情，就可以继续往前走一步。</p>
+<p>例如：</p>
+<p>第一次让 AI 帮你整理资料。</p>
+<p>第二次继续使用。</p>
+<p>第三次把方法总结成固定流程。</p>
+<p>最后就可能形成：</p>
+
+    <blockquote>
+        <p><strong>Prompt → Skill → Workflow</strong></p>
+
+    </blockquote>
+<p>也就是说，不再只是临时问 AI 一个问题，而是逐渐建立一套属于自己的工作方法。</p>
+<p>每做一次工作，都可以问自己：</p>
+
+    <blockquote>
+        <p><strong>下次能不能更快？</strong></p>
+
+    </blockquote>
+<p>然后尝试：</p>
+<ul>
+<li>固定模板</li>
+<li>建立 Checklist</li>
+<li>写脚本</li>
+<li>使用 AI</li>
+<li>建立 Skill</li>
+<li>自动化重复步骤</li>
+</ul>
+<p>长期积累下来，你拥有的不只是工作年限，而是一套自己的工作系统。</p>
+<h2 id="coding-agent-改变的不是写代码而是工作颗粒度"><a href="#coding-agent-%e6%94%b9%e5%8f%98%e7%9a%84%e4%b8%8d%e6%98%af%e5%86%99%e4%bb%a3%e7%a0%81%e8%80%8c%e6%98%af%e5%b7%a5%e4%bd%9c%e9%a2%97%e7%b2%92%e5%ba%a6" class="header-anchor"></a>Coding Agent 改变的不是“写代码”，而是工作颗粒度
+</h2><p>Coding Agent 的价值并不只是让 AI 写完整的软件。</p>
+<p>它同样适合处理大量重复性的开发工作：</p>
+<ul>
+<li>修改类似代码</li>
+<li>查找问题</li>
+<li>重构重复代码</li>
+<li>修改大量文件</li>
+<li>执行机械性的开发操作</li>
+</ul>
+<p>过去可能需要人不断操作。</p>
+<p>现在可以变成：</p>
+
+    <blockquote>
+        <p><strong>提出目标 → AI 执行 → 人检查 → 处理异常</strong></p>
+
+    </blockquote>
+<p>这实际上改变了人的工作颗粒度。</p>
+<p>人不一定需要亲自完成每一个操作，而是更多负责目标、判断和结果。</p>
+<h2 id="ai-最终会进入工作流"><a href="#ai-%e6%9c%80%e7%bb%88%e4%bc%9a%e8%bf%9b%e5%85%a5%e5%b7%a5%e4%bd%9c%e6%b5%81" class="header-anchor"></a>AI 最终会进入工作流
+</h2><p>AI 的进一步发展，并不只是“聊天”。</p>
+<p>例如：</p>
+
+    <blockquote>
+        <p>完成 A → AI 判断下一步 → 找到需要沟通的人 → 自动提醒 → 等待反馈 → 继续下一步</p>
+
+    </blockquote>
+<p>这时候 AI 已经不只是一个聊天工具，而开始成为：</p>
+
+    <blockquote>
+        <p><strong>工作流程中的一个执行节点。</strong></p>
+
+    </blockquote>
+<p>这也是我认为 AI 应用真正有价值的地方之一。</p>
+<h2 id="ai--原有专业"><a href="#ai--%e5%8e%9f%e6%9c%89%e4%b8%93%e4%b8%9a" class="header-anchor"></a>AI + 原有专业
+</h2><p>AI 也不意味着必须彻底离开原来的专业。</p>
+<p>一个很重要的方向可能是：</p>
+
+    <blockquote>
+        <p><strong>AI + 原有行业知识</strong></p>
+
+    </blockquote>
+<p>例如：</p>
+<ul>
+<li>制造业 + AI</li>
+<li>机械 + AI</li>
+<li>化工 + AI</li>
+<li>建筑 + AI</li>
+<li>医疗 + AI</li>
+<li>财务 + AI</li>
+</ul>
+<p>原来的专业知识不一定是负担，也可能成为进入 AI 应用领域的入口。</p>
+<p>真正有价值的地方，可能不是“我会使用 AI”，而是：</p>
+
+    <blockquote>
+        <p><strong>我理解一个行业，同时知道 AI 可以怎样解决这个行业的问题。</strong></p>
+
+    </blockquote>
+<h2 id="给传统工科人的一点思考"><a href="#%e7%bb%99%e4%bc%a0%e7%bb%9f%e5%b7%a5%e7%a7%91%e4%ba%ba%e7%9a%84%e4%b8%80%e7%82%b9%e6%80%9d%e8%80%83" class="header-anchor"></a>给传统工科人的一点思考
+</h2><p>如果长期只是：</p>
+
+    <blockquote>
+        <p>给你一个需求 → 按固定流程完成 → 下班</p>
+
+    </blockquote>
+<p>那么经验可能只是：</p>
+
+    <blockquote>
+        <p><strong>“我做过很多次。”</strong></p>
+
+    </blockquote>
+<p>但如果每次工作都继续问：</p>
+
+    <blockquote>
+        <p>为什么要这样做？<br>
+哪一步最浪费时间？<br>
+哪一步可以交给 AI？<br>
+哪一步可以自动化？<br>
+哪一步必须由人判断？</p>
+
+    </blockquote>
+<p>那么工作经验就可能逐渐变成：</p>
+
+    <blockquote>
+        <p><strong>“我理解这个流程，而且我能让它变得更好。”</strong></p>
+
+    </blockquote>
+<p>这可能是 AI 时代传统专业背景的人值得关注的一条路径。</p>
+<h2 id="最后"><a href="#%e6%9c%80%e5%90%8e" class="header-anchor"></a>最后
+</h2><p>普通人学习 AI，也许不需要一开始就想着：</p>
+
+    <blockquote>
+        <p>“我要成为 AI 专家。”</p>
+
+    </blockquote>
+<p>更现实的路径可能是：</p>
+
+    <blockquote>
+        <p><strong>先使用 → 再理解 → 再优化 → 再自动化</strong></p>
+
+    </blockquote>
+<p>先让 AI 帮你解决一个具体问题。</p>
+<p>然后观察这个问题能不能重复。</p>
+<p>如果可以，就尝试把它变成固定流程。</p>
+<p>如果流程足够稳定，再考虑让 AI 或程序自动执行。</p>
+<p>最终真正积累下来的，不只是：</p>
+
+    <blockquote>
+        <p><strong>“我会用 ChatGPT。”</strong></p>
+
+    </blockquote>
+<p>而是：</p>
+
+    <blockquote>
+        <p><strong>“我知道如何让 AI 进入自己的工作流程。”</strong></p>
+
+    </blockquote>
+<p>这可能才是普通人真正学习 AI 的过程。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ai/">AI</a>
+        
+            <a href="/tags/agent/">Agent</a>
+        
+            <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/">工作流</a>
+        
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>本文采用 <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/site-v2-upgrade/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 站点升级说明 v2.0：从 PaperMod 迁移到 Stack" height="150" loading="lazy" src="/posts/site-v2-upgrade/cover_hu_917543ea92a252e9.png" srcset="/posts/site-v2-upgrade/cover_hu_917543ea92a252e9.png 1x, /posts/site-v2-upgrade/cover_hu_5aabfcd413e029e5.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #4b758480 0%, #405f6cC0 100%);">
+            <h2 class="article-title">站点升级说明 v2.0：从 PaperMod 迁移到 Stack</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post 简单的markdown语法笔记" height="150" loading="lazy" src="/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/cover_hu_3a13655a2a9db155.png" srcset="/talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/cover_hu_3a13655a2a9db155.png 1x, /talk/%E6%88%91%E7%9A%84%E7%AE%80%E6%98%93-markdown-%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/cover_hu_49fa45290c22c56d.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #52728880 0%, #466376C0 100%);">
+            <h2 class="article-title">简单的markdown语法笔记</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/">
+        
+        <div class="article-image">
+            <img alt="Featured image of post follow your passion真的是对的嘛？" height="150" loading="lazy" src="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_d500316b2622ba40.png" srcset="/posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_d500316b2622ba40.png 1x, /posts/%E7%83%AD%E6%83%85%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%81%87%E8%B1%A1%E5%AA%92%E4%BD%93%E5%8F%99%E8%BF%B0%E7%9A%84%E8%AD%A6%E8%A7%89/cover_hu_d97c34a73817d33e.png 2x" width="250">
+
+        </div>
+        
+
+        <div class="article-details"style="background: linear-gradient(0deg, #b4856180 0%, #a37554C0 100%);">
+            <h2 class="article-title">follow your passion真的是对的嘛？</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="redou12/redou12.github.io"
+    data-repo-id="R_kgDOUh3EMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOUh3EM84DGQle"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 © 2026 Redou
+    </section>
+    
+    <section class="powerby">
+        
+            v2.0 · 由 Hugo 与 Stack 驱动 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.f856840516f7c2ad1769a8f5937e3d08d6cb386e2cd2dd025ae696e0ff207958.js" defer></script>
+
+
+    </body>
+</html>
